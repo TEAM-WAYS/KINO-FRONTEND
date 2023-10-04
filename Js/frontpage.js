@@ -1,25 +1,38 @@
 // see what movies are playing
-const image = document.getElementById("image")
+//const image = document.getElementById("image")
 const movielink = document.getElementById("movielink")
+
 const table = document.getElementById("movietable")
 
 const urlMovies = "http://localhost:8080/movies"
 
 
+let cellCount = 0
+let row
 function setTable(movie) {
-    let cellCount = 0
-    let rowCount = table.rows.length
-    let row =table.insertRow(rowCount)
-    row.id = movie.name
+
+
+    rowCount = table.rows.length
+     if(cellCount%3 == 0) {
+         row = table.insertRow(rowCount)
+         cellCount = 0
+     }
 
 
     cell = row.insertCell(cellCount++)
-    sessionStorage.setItem("moviename", movie.name);
+    //cell.id = movie.title
     
-    image.setAttribute("src", movie.hrefPhoto)
-    image.setAttribute("alt", "hej")
+
+   let image = document.createElement('img')
+
+    image.src = movie.image
+    image.alt = movie.title
+    
+
     image.setAttribute("width", 150)
     image.setAttribute("height", 150)
+    
+    image.addEventListener("click", function(){ goTo(movie.title)} )
     cell.appendChild(image)
 }
 
@@ -34,8 +47,10 @@ async function fetchMovies(){
 async function fetchAnyUrl(url) {
     try {
         const response = await fetch(url)
+        //debugger
         if(response.ok){
             return response.json()
+            console.log("ok")
         }else {
             throw new Error(`HTTP error! Status: ${response.status}`)
         }
@@ -48,3 +63,8 @@ async function fetchAnyUrl(url) {
 document.addEventListener('DOMContentLoaded', fetchMovies())
 
 
+function goTo(title){
+    sessionStorage.setItem("title", title)
+    window.location.href = "moviepage.html"
+
+}

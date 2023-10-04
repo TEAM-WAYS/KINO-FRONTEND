@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="start">
+    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="fetch virker ikke">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/frontpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/frontpage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/moviepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/moviepage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/moviepage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +71,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.frontpage.html">
     <configuration name="frontpage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KinoFrontend/frontpage.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="moviepage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KinoFrontend/moviepage.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -106,6 +110,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.frontpage.html" />
+        <item itemvalue="JavaScript Debug.moviepage.html" />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696321080751</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fetch virker ikke">
+      <created>1696416735694</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696416735694</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +173,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start" />
-    <option name="LAST_COMMIT_MESSAGE" value="start" />
+    <MESSAGE value="fetch virker ikke" />
+    <option name="LAST_COMMIT_MESSAGE" value="fetch virker ikke" />
   </component>
 </project>

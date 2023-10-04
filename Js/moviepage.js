@@ -1,13 +1,14 @@
 <!--See movie details, when is playing, and select-->
-const movie = sessionStorage.getItem("movie")
+let title = sessionStorage.getItem("title")
 const table = document.getElementById("table")
-const row = document.getElementById("row")
+//const row = document.getElementById("row")
+const pbGoBack = document.getElementById("pbGoBack")
 
 function setTable(timeSlot) {
     let cellCount = 0
     let rowCount = table.rows.length
     let row = table.insertRow(rowCount)
-    row.id = movie.name
+    
 
     cell = row.insertCell(cellCount++)
     
@@ -28,3 +29,9 @@ function fetchAnyUrl(url) {
 }
 
 fetchTimeslots()
+
+pbGoBack.addEventListener("click", function(){goBack()})
+
+function goBack(){
+    window.location.href = "frontpage.html"
+}
