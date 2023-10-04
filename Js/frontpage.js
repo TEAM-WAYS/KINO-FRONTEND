@@ -1,9 +1,9 @@
 // see what movies are playing
 const image = document.getElementById("image")
 const movielink = document.getElementById("movielink")
-const table = document.getElementById("table")
+const table = document.getElementById("movietable")
 
-const urlMovies = "http://localhost:8080/kino/movies"
+const urlMovies = "http://localhost:8080/movies"
 
 
 function setTable(movie) {
@@ -20,18 +20,31 @@ function setTable(movie) {
     image.setAttribute("alt", "hej")
     image.setAttribute("width", 150)
     image.setAttribute("height", 150)
-    cell.appendChild(img)
+    cell.appendChild(image)
 }
 
-let movies = []
+//let movies = []
 async function fetchMovies(){
 
-    movies = await fetchAnyUrl(urlMovies)
+    const movies = await fetchAnyUrl(urlMovies)
     movies.forEach(setTable)
+    console.log("test")
+    console.log("this is movie list : "+movies)
 }
-function fetchAnyUrl(url) {
-    return fetch(url).then(response => response.json())
-}
+async function fetchAnyUrl(url) {
+    try {
+        const response = await fetch(url)
+        if(response.ok){
+            return response.json()
+        }else {
+            throw new Error(`HTTP error! Status: ${response.status}`)
+        }
+    }catch (error){
+        console.error('Error fetching data:', error);
+        throw error;
+    }
 
-fetchMovies()
+}
+document.addEventListener('DOMContentLoaded', fetchMovies())
+
 

@@ -17,16 +17,6 @@ function setTable(timeSlot) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 let timeslots = []
 async function fetchTimeslots(){
 
