@@ -38,6 +38,12 @@ for (let row = 1; row <= rows; row++) {
         rowElement.appendChild(seat);
     }
 
+    // Add row number at the end of the row
+    const rowNumber = document.createElement('div');
+    rowNumber.className = 'row-number';
+    rowNumber.textContent = `Row ${row}`;
+    rowElement.appendChild(rowNumber);
+
     seatContainer.appendChild(rowElement);
 }
 
