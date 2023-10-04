@@ -1,0 +1,30 @@
+.seat {
+    width: 40px;
+    height: 30px;
+    margin: 2px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+}
+.sold {
+    background-color: #ccc;
+}
+.available {
+    background-color: #4CAF50;
+    color: white;
+}
+.row {
+    display: block;
+    margin-bottom: 10px;
+}
+.button-container {
+    align: right;
+    margin-top: 20px;
+}
+    #confirm-button {
+        padding: 10px 20px;
+        background-color: #0BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
