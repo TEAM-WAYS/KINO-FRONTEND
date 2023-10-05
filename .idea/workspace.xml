@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="virker ikke helt">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="virker,men kan forbedres">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,9 +107,9 @@
       <list>
         <item itemvalue="JavaScript Debug.frontpage.html" />
         <item itemvalue="JavaScript Debug.moviepage.html" />
+        <item itemvalue="JavaScript Debug.frontpage.html" />
         <item itemvalue="JavaScript Debug.moviepage.html" />
-        <item itemvalue="JavaScript Debug.frontpage.html" />
-        <item itemvalue="JavaScript Debug.frontpage.html" />
+        <item itemvalue="JavaScript Debug.moviepage.html" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696503208430</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="virker,men kan forbedres">
+      <created>1696522864325</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696522864325</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +196,7 @@
     <MESSAGE value="start" />
     <MESSAGE value="fetch virker ikke" />
     <MESSAGE value="virker ikke helt" />
-    <option name="LAST_COMMIT_MESSAGE" value="virker ikke helt" />
+    <MESSAGE value="virker,men kan forbedres" />
+    <option name="LAST_COMMIT_MESSAGE" value="virker,men kan forbedres" />
   </component>
 </project>
