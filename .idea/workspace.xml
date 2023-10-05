@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/frontpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/frontpage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/moviepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/moviepage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="review" />
+        <entry key="$PROJECT_DIR$" value="developer" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -108,6 +109,9 @@
       <list>
         <item itemvalue="JavaScript Debug.frontpage.html" />
         <item itemvalue="JavaScript Debug.moviepage.html" />
+        <item itemvalue="JavaScript Debug.moviepage.html" />
+        <item itemvalue="JavaScript Debug.frontpage.html" />
+        <item itemvalue="JavaScript Debug.frontpage.html" />
       </list>
     </recent_temporary>
   </component>

@@ -32,7 +32,7 @@ function setTable(movie) {
     image.setAttribute("width", 150)
     image.setAttribute("height", 150)
     
-    image.addEventListener("click", function(){ goTo(movie.title)} )
+    image.addEventListener("click", function(){ goTo(movie.id)} )
     cell.appendChild(image)
 }
 
@@ -63,8 +63,8 @@ async function fetchAnyUrl(url) {
 document.addEventListener('DOMContentLoaded', fetchMovies())
 
 
-function goTo(title){
-    sessionStorage.setItem("title", title)
+function goTo(id){
+    sessionStorage.setItem("movieid", id)
     window.location.href = "moviepage.html"
 
 }
