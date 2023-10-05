@@ -3,15 +3,16 @@ const movieId = sessionStorage.getItem("movieid")
 const table = document.getElementById("table")
 //const row = document.getElementById("row")
 const pbGoBack = document.getElementById("pbGoBack")
-const hall = fetchhalls()
+const halls = fetchhalls()
 
 let row
 let cellCount = 0
 function setHeader(){
 
-    row = table.insertRow(0)
-    halls.forEach(function (hall) {cell = row.insertCell(cellCount++) })
-    cell.appendChild(hall.name)
+    row = table.insertRow(rowCount)
+    halls.forEach((hall) => {
+        cell = row.insertCell(cellCount++)
+        cell.appendChild(hall.name)})
     cellCount = 0
 }
 
@@ -23,8 +24,6 @@ function setTable(timeSlot) {
         cellCount = 0
     }
 
-
-    
 
     cell = row.insertCell(cellCount++)
     if(cellCount==timeSlot.hall) {
@@ -62,7 +61,7 @@ function goBack(){
 }
 function filter(){
 
-    if (timeslot.movie == movieId){
+    if (timeslot.id == movie.timeslot){
         filteredTimeslots.add(timeslot)
     }
 
