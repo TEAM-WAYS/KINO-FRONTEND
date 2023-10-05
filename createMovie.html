@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create movie</title>
+</head>
+<body>
+<h1>Insert Movie</h1>
+
+<div class="form-container">
+    <form action="http://localhost:8080/movies" method="post" id="formMovie">
+        <div class="form-group">
+            <label class="form-lab" for="inpTitle">Title</label>
+            <input
+                    type="text"
+                    name="Title"
+                    class="inputfield"
+                    placeholder="eks. hairy potter"
+                    id="inpTitle"
+                    required>
+        </div>
+        <div class="form-group">
+            <label class="form-lab" for="inpDuration">Duration</label>
+            <input
+                    type="number"
+                    name="navn"
+                    class="inputfield"
+                    placeholder="duration in minuttes"
+                    id="inpDuration"
+                    required>
+        </div>
+        <div class="form-group">
+            <label class="form-lab" for="inpDirector">Director</label>
+            <input
+                    type="text"
+                    name="director"
+                    class="inputfield"
+                    placeholder="james came a lot"
+                    id="inpDirector"
+                    required>
+        </div>
+        <div class="form-group">
+            <label class="form-lab" for="inpImage">Image</label>
+            <input
+                    type="text"
+                    name="image"
+                    class="inputfield"
+                    placeholder="imagelink"
+                    id="inpImage"
+                    required>
+        </div>
+        <div class="form-group">
+            <label class="form-lab" for="inpGenre">Genre</label>
+            <input
+                    type="text"
+                    name="genre"
+                    class="inputfield"
+                    placeholder="eks. fantasy"
+                    id="inpGenre"
+                    required>
+        </div>
+        <div class="form-group">
+            <label class="form-lab" for="inpDescription">Description</label>
+            <input
+                    type="text"
+                    name="description"
+                    class="inputfield"
+                    placeholder="description of what the movie is about"
+                    id="inpDescription"
+                    required>
+        </div>
+        <div class="form-group">
+            <label class="form-lab" for="inpPegi">Pegi</label>
+            <input
+                    type="text"
+                    name="pegi"
+                    class="inputfield"
+                    placeholder="age limit"
+                    id="inpPegi"
+                    required>
+        </div>
+        <button type=submit title="movie" id="submit">Opret</button>
+    </form>
+</div>
+
+<script type="module" src="Js/createmovie.js"></script>
+</body>
+</html>
