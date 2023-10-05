@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="">
+    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="virker ikke helt">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/frontpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/frontpage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/moviepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/moviepage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +155,21 @@
       <option name="project" value="LOCAL" />
       <updated>1696416735694</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="virker ikke helt">
+      <created>1696501137799</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696501137799</updated>
+    </task>
+    <task id="LOCAL-00006" summary="virker ikke helt">
+      <created>1696503208430</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696503208430</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +189,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start" />
     <MESSAGE value="fetch virker ikke" />
-    <option name="LAST_COMMIT_MESSAGE" value="fetch virker ikke" />
+    <MESSAGE value="virker ikke helt" />
+    <option name="LAST_COMMIT_MESSAGE" value="virker ikke helt" />
   </component>
 </project>
