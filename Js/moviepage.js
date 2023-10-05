@@ -1,45 +1,74 @@
 <!--See movie details, when is playing, and select-->
 const movieId = sessionStorage.getItem("movieid")
+console.log("movie id:"+movieId)
+
+
 const table = document.getElementById("table")
 //const row = document.getElementById("row")
 const pbGoBack = document.getElementById("pbGoBack")
-const halls = fetchhalls()
+const urlMovies = "http://localhost:8080/movies"
+const urlHalls = "http://localhost:8080/halls"
+const urlTimeslots = "http://localhost:8080/timeslots"
+
+let halls = []
+let timeslots = []
+let filteredTimeslots = []
+
 
 let row
 let cellCount = 0
-function setHeader(){
-
-    row = table.insertRow(rowCount)
-    halls.forEach((hall) => {
-        cell = row.insertCell(cellCount++)
-        cell.appendChild(hall.name)})
-    cellCount = 0
+function showHalls(hall){
+    const cell = row.insertCell(cellCount++)
+    cell.innerHTML = hall.name
 }
+async function setHeader(){
+
+    let rowCount = table.rows.length
+    row = table.insertRow(rowCount)
+    halls = await fetchhalls()
+    halls.forEach(showHalls)
+    cellCount = 0
+    /*fetchhalls().then(halls => {
+        console.log("halls: "+halls)
+        halls.forEach(showHalls);
+        cellCount = 0;
+    })*/
+
+
+}
+
 
 function setTable(timeSlot) {
 
-    rowCount = table.rows.length
-    if(cellCount%halls.length == 0) {
+    let rowCount = table.rows.length
+    console.log("Number of Halls: "+ halls.length)
+    if(cellCount % halls.length == 0) {
         row = table.insertRow(rowCount)
+        console.log("inserting row")
         cellCount = 0
     }
+    /*row = table.insertRow(rowCount)
+    console.log("inserting row")
+    cellCount = 0*/
 
 
-    cell = row.insertCell(cellCount++)
-    if(cellCount==timeSlot.hall) {
-        cell.appendChild(timeSlot.start)
-    }
-    
-    
+    do{
+        cell = row.insertCell(cellCount++)
+        console.log("cellCont :"+cellCount+" , hall nr : "+timeSlot.hall.id)
+    }while(cellCount!=timeSlot.hall.id && cellCount<3)
+    cell.innerHTML = timeSlot.start
+    console.log("time start movie :" + timeSlot.start)
+
 }
 
 
-let timeslots = []
-let filteredTimeslots = []
+
 async function fetchTimeslots(){
 
     timeslots = await fetchAnyUrl(urlTimeslots)
-    filter()
+    console.log("Timeslots: "+timeslots)
+    timeslots.forEach(filter)
+    console.log("filteredTimeslots: "+filteredTimeslots)
     filteredTimeslots.forEach(setTable)
 }
 async function fetchhalls(){
@@ -48,8 +77,21 @@ async function fetchhalls(){
 }
 
 
-function fetchAnyUrl(url) {
-    return fetch(url).then(response => response.json())
+async function fetchAnyUrl(url) {
+    try {
+        const response = await fetch(url)
+
+        if(response.ok){
+            return response.json()
+            console.log("ok")
+        }else {
+            throw new Error(`HTTP error! Status: ${response.status}`)
+        }
+    }catch (error){
+        console.error('Error fetching data:', error);
+        throw error;
+    }
+
 }
 
 
@@ -59,10 +101,11 @@ pbGoBack.addEventListener("click", function(){goBack()})
 function goBack(){
     window.location.href = "frontpage.html"
 }
-function filter(){
+function filter(timeslot){
 
-    if (timeslot.id == movie.timeslot){
-        filteredTimeslots.add(timeslot)
+    console.log("timeslot.movie: "+timeslot.movie.id)
+    if (timeslot.movie.id == movieId){
+        filteredTimeslots.push(timeslot)
     }
 
 }
