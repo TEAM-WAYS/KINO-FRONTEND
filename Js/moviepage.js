@@ -43,16 +43,21 @@ function setTable(timeSlot) {
     do{
         cell = row.insertCell(cellCount++)
         console.log("cellCont :"+cellCount+" , hall nr : "+timeSlot.hall.id)
-    }while(cellCount!=timeSlot.hall.id && cellCount<3)
-    cell.innerHTML = timeSlot.start
-    cell.classList.add('timeslot')
+    }while(cellCount!=timeSlot.hall.id && cellCount<3) // der var en bugg
+    //cell.innerHTML = timeSlot.start
+    //cell.classList.add('timeslot')
     console.log("time start movie :" + timeSlot.start)
-    cell.addEventListener("click", function() {
+    let timeslot = document.createElement("timeslot")
+    timeslot.addEventListener("click", function() {
         const nextPage = "chooseseat.html"
-        sessionStorage.setItem("timeslot", timeSlot)
+        sessionStorage.setItem("timeslotId", timeSlot.id)
         window.location.href = nextPage
 
-    })
+    }
+
+    )
+    timeslot.innerHTML = timeSlot.start
+    cell.append(timeslot)
 }
 
 
