@@ -22,19 +22,11 @@ function showHalls(hall){
     cell.innerHTML = hall.name
 }
 async function setHeader(){
-
     let rowCount = table.rows.length
     row = table.insertRow(rowCount)
     halls = await fetchhalls()
     halls.forEach(showHalls)
     cellCount = 0
-    /*fetchhalls().then(halls => {
-        console.log("halls: "+halls)
-        halls.forEach(showHalls);
-        cellCount = 0;
-    })*/
-
-
 }
 
 
@@ -47,18 +39,20 @@ function setTable(timeSlot) {
         console.log("inserting row")
         cellCount = 0
     }
-    /*row = table.insertRow(rowCount)
-    console.log("inserting row")
-    cellCount = 0*/
-
 
     do{
         cell = row.insertCell(cellCount++)
         console.log("cellCont :"+cellCount+" , hall nr : "+timeSlot.hall.id)
     }while(cellCount!=timeSlot.hall.id && cellCount<3)
     cell.innerHTML = timeSlot.start
+    cell.classList.add('timeslot')
     console.log("time start movie :" + timeSlot.start)
+    cell.addEventListener("click", function() {
+        const nextPage = "chooseseat.html"
+        sessionStorage.setItem("timeslot", timeSlot)
+        window.location.href = nextPage
 
+    })
 }
 
 

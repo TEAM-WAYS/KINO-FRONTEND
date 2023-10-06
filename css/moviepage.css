@@ -1,0 +1,65 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+body {
+    background-image: url("https://photos.lensculture.com/medium/d7152bb2-0276-4ecc-94b6-259ea077cd70.jpg");
+    background-size: cover; /* Adjust to your preference */
+    background-position: center center; /* Adjust to your preference */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#table th,
+#table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#table td.available {
+    background-color: #99FF99; /* Green for available seats */
+}
+
+#table td.booked {
+    background-color: #FF9999; /* Red for booked seats */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+#table td.timeslot {
+    background-color: #99FF99; /* Green for timeslots */
+    border-radius: 5px; /* Add rounded corners */
+}
