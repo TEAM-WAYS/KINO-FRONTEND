@@ -35,7 +35,8 @@ body {
 }
 
 #table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: rgba(245, 239, 239, 0.5);;
+
 }
 
 #table td.available {
@@ -59,7 +60,9 @@ button {
 button:hover {
     background-color: #45a049;
 }
-#table td.timeslot {
-    background-color: #99FF99; /* Green for timeslots */
-    border-radius: 5px; /* Add rounded corners */
+#table .timeslot  {
+    background-color: #3bf109; /* Green for timeslots */
+    border-radius: 20px; /* Add rounded corners */
+    padding: 8px;
+    opacity: 90%;
 }

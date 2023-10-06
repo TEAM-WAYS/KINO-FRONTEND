@@ -26,6 +26,8 @@ async function setHeader(){
     row = table.insertRow(rowCount)
     halls = await fetchhalls()
     halls.forEach(showHalls)
+    rowCount = table.rows.length
+    row = table.insertRow(rowCount)
     cellCount = 0
 }
 
@@ -33,31 +35,36 @@ async function setHeader(){
 function setTable(timeSlot) {
 
     let rowCount = table.rows.length
-    console.log("Number of Halls: "+ halls.length)
-    if(cellCount % halls.length == 0) {
-        row = table.insertRow(rowCount)
-        console.log("inserting row")
-        cellCount = 0
+    let done = false
+    while(!done){
+        if(cellCount+1===timeSlot.hall.id){
+            cell = row.insertCell(cellCount++)
+
+            console.log("time start movie :" + timeSlot.start)
+            let timeslotElement = document.createElement("timeslot")
+            timeslotElement.classList.add("timeslot")
+            timeslotElement.addEventListener("click", function() {
+                    const nextPage = "chooseseat.html"
+                    sessionStorage.setItem("timeslotId", timeSlot.id)
+                    window.location.href = nextPage
+                console.log("cellCont :"+cellCount+" , hall nr : "+timeSlot.hall.id)
+                }
+            )
+            timeslotElement.innerHTML = timeSlot.start
+            cell.append(timeslotElement)
+            row = table.insertRow(rowCount)
+            cellCount = 0
+            done = true
+            console.log("Done?: "+done)
+        }else {
+
+            cell = row.insertCell(cellCount++)
+
+            console.log("cellCont :"+cellCount+" , hall nr : "+timeSlot.hall.id)
+        }
     }
 
-    do{
-        cell = row.insertCell(cellCount++)
-        console.log("cellCont :"+cellCount+" , hall nr : "+timeSlot.hall.id)
-    }while(cellCount!=timeSlot.hall.id && cellCount<3) // der var en bugg
-    //cell.innerHTML = timeSlot.start
-    //cell.classList.add('timeslot')
-    console.log("time start movie :" + timeSlot.start)
-    let timeslot = document.createElement("timeslot")
-    timeslot.addEventListener("click", function() {
-        const nextPage = "chooseseat.html"
-        sessionStorage.setItem("timeslotId", timeSlot.id)
-        window.location.href = nextPage
 
-    }
-
-    )
-    timeslot.innerHTML = timeSlot.start
-    cell.append(timeslot)
 }
 
 
