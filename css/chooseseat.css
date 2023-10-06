@@ -1,3 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Set the background to black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200vh; /* Center content vertically in the viewport */
+}
+
+.my-heading {
+    color: #f9f9f9;
+    font-weight: bold;
+    align-content: start;
+}
+
 .seat {
     width: 40px;
     height: 30px;
