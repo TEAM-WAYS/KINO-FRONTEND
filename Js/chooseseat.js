@@ -61,6 +61,10 @@ async function start(){
         } else {
             const seatList = selectedSeats.join(', ');
             alert(`Your seats (${seatList}) are confirmed. Please check your email for details.`);
+            sessionStorage.setItem("timeslot",JSON.stringify(timeslot))
+            sessionStorage.setItem("seats",JSON.stringify(selectedSeats))
+            window.location.href = "ticket.html"
+
         }
     });
 
@@ -73,6 +77,8 @@ async function start(){
     }
 
 }
+
+
 
 
 
