@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="chooseat background and flex">
-      <change afterPath="$PROJECT_DIR$/Js/payment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/payment.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="virker">
+      <change afterPath="$PROJECT_DIR$/Js/ticket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/chooseseat.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/chooseseat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticket.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,16 +19,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
+        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="choose-seat-design" />
+        <entry key="$PROJECT_DIR$" value="developer" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,33 +79,26 @@
     <configuration name="moviepage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KinoFrontend/moviepage.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration default="true" type="SwaggerCodegen" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allowRunningInParallel" value="false" />
+    <configuration default="true" type="SwaggerCodegen">
+      <option name="activeConfigurationType" value="FILE" />
+      <option name="configurationPath" value="" />
+      <option name="customJreEnabled" value="false" />
       <option name="customTemplatesPath" value="" />
-      <option name="envs">
-        <map />
-      </option>
+      <option name="enableDebugLogging" value="false" />
       <option name="generateToPath" value="C:\Users\stinu\KEA Datamatiker\1Semester\JavaProgram\KinoFrontend\gen" />
       <option name="generationParameters">
         <list />
       </option>
-      <option name="generatorType" value="OPENAPI_GENERATOR_V6" />
+      <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0/openapi-generator-cli-5.0.0.jar" />
       <option name="jdkPath" value="" />
       <option name="language" value="java" />
-      <option name="passParentEnvs" value="true" />
-      <option name="programParameters" />
-      <option name="projectPathOnTarget" />
-      <option name="selectedOptions">
-        <list />
-      </option>
       <option name="specificationPath" value="C:\Users\stinu\AppData\Roaming\JetBrains\IntelliJIdea2022.3\openApiExport\superhero4-openapi.yaml" />
-      <option name="workingDirectory" value="C:\Users\stinu\AppData\Roaming\JetBrains\IntelliJIdea2022.3\openApiExport" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.moviepage.html" />
         <item itemvalue="JavaScript Debug.frontpage.html" />
+        <item itemvalue="JavaScript Debug.moviepage.html" />
         <item itemvalue="JavaScript Debug.frontpage.html" />
         <item itemvalue="JavaScript Debug.moviepage.html" />
         <item itemvalue="JavaScript Debug.frontpage.html" />
@@ -125,6 +117,7 @@
       <workItem from="1695975357807" duration="3014000" />
       <workItem from="1696237898146" duration="507000" />
       <workItem from="1696488535520" duration="2866000" />
+      <workItem from="1696673444087" duration="7591000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1695902303288</created>
