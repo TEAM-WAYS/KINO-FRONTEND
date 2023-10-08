@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="chooseat background and flex" />
-    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="stadig fejl i moviepage">
+    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="chooseat background and flex">
+      <change afterPath="$PROJECT_DIR$/Js/payment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/payment.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/moviepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/moviepage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/moviepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/moviepage.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +20,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -57,21 +58,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JavaScript Debug.frontpage.html">
     <configuration name="frontpage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KinoFrontend/frontpage.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -79,33 +80,27 @@
     <configuration name="moviepage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KinoFrontend/moviepage.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="KinoFrontend" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="KinoFrontend" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="SwaggerCodegen">
-      <option name="activeConfigurationType" value="FILE" />
-      <option name="configurationPath" value="" />
-      <option name="customJreEnabled" value="false" />
+    <configuration default="true" type="SwaggerCodegen" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
       <option name="customTemplatesPath" value="" />
-      <option name="enableDebugLogging" value="false" />
+      <option name="envs">
+        <map />
+      </option>
       <option name="generateToPath" value="C:\Users\stinu\KEA Datamatiker\1Semester\JavaProgram\KinoFrontend\gen" />
       <option name="generationParameters">
         <list />
       </option>
-      <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0/openapi-generator-cli-5.0.0.jar" />
+      <option name="generatorType" value="OPENAPI_GENERATOR_V6" />
       <option name="jdkPath" value="" />
       <option name="language" value="java" />
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
       <option name="specificationPath" value="C:\Users\stinu\AppData\Roaming\JetBrains\IntelliJIdea2022.3\openApiExport\superhero4-openapi.yaml" />
+      <option name="workingDirectory" value="C:\Users\stinu\AppData\Roaming\JetBrains\IntelliJIdea2022.3\openApiExport" />
       <method v="2" />
     </configuration>
     <recent_temporary>
