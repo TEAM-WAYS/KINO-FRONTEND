@@ -1,19 +1,40 @@
-const timeslotId = sessionStorage.getItem("timeslotId")
+//const timeslotId = sessionStorage.getItem("timeslotId")
+const timeslot = JSON.parse(sessionStorage.getItem("timeslot"))
 const seatContainer = document.getElementById('seat-container');
-console.log("timeslotId :  "+ timeslotId)
-const urlTimeslot = "http://localhost:8080/timeslot/"+timeslotId
+//console.log("timeslotId :  "+ timeslotId)
+//const urlTimeslot = "http://localhost:8080/timeslot/"+timeslotId
+const urlSeats = "http://localhost:8080/seats"
+const urlSeat = "http://localhost:8080/seat"
+const hallHeader = document.getElementById("hallname")
+hallHeader.innerHTML= timeslot.hall.name
+const seatTemplate = {
+    id: undefined,
+    status: undefined,
+    row: undefined,
+    number: undefined,
+    timeslot: undefined
+}
+
+
 start()
 async function start(){
 
-    const timeslot = await fetchTimeslot()
+    //const timeslot = await fetchTimeslot()
     console.log("timeslot: " + timeslot.start)
     console.log("Hall : " + timeslot.hall.name)
     console.log("Hall size : " + timeslot.hall.seatsPrRow+" x "+timeslot.hall.numberOfRows)
     const rows = timeslot.hall.numberOfRows
     const seatsPerRow = timeslot.hall.seatsPrRow
     console.log("rows: " + rows + " , seats per row : " + seatsPerRow)
-    const soldSeats = ['1-2', '3-4', '5-6']; // Example: List of sold seats
+    const soldSeats =[]
+    const soldSeatsDB = await fetchAndReturn(urlSeats)
+    soldSeatsDB.fromEach(function (seat) {   // Asuming that all seats saved are seats sold
+        soldSeats.push(seat.row+"-"+seat.number)
+        }
+
+    )
     const selectedSeats = [];
+    const selectedSeatTemplate = []
     const pbGoBack = document.getElementById("pbGoBack")
 
 // Create seats dynamically
@@ -36,6 +57,7 @@ async function start(){
                         seat.classList.remove('available');
                         seat.classList.add('selected');
                         selectedSeats.push(seatId);
+
                     } else {
                         seat.classList.remove('selected');
                         seat.classList.add('available');
@@ -62,7 +84,18 @@ async function start(){
             const seatList = selectedSeats.join(', ');
             alert(`Your seats (${seatList}) are confirmed. Please check your email for details.`);
             sessionStorage.setItem("timeslot",JSON.stringify(timeslot))
-            sessionStorage.setItem("seats",JSON.stringify(selectedSeats))
+            selectedSeats.forEach((seatId)=>{
+                const split = seatId.split("-")
+                seatTemplate.row = split[0]
+                seatTemplate.number = split[1]
+                seatTemplate.timeslot = timeslot
+                seatTemplate.status = 1
+                postSeatReservation(seatTemplate)
+                selectedSeatTemplate.push(seatTemplate)
+
+            })
+
+            sessionStorage.setItem("seats",JSON.stringify(selectedSeatTemplate))
             window.location.href = "ticket.html"
 
         }
@@ -75,6 +108,17 @@ async function start(){
     function goBack() {
         window.location.href = "moviepage.html"
     }
+
+}
+
+function postSeatReservation(seat){
+    fetch(urlSeat, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(seat)
+    })
 
 }
 
@@ -99,6 +143,9 @@ async function fetchAnyUrl(url) {
         throw error;
     }
 
+}
+async function fetchAndReturn(url){
+    return something = await fetchAnyUrl(url)
 }
 
 async function fetchTimeslot(){

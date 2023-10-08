@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="virker">
-      <change afterPath="$PROJECT_DIR$/Js/ticket.js" afterDir="false" />
+    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="in progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Js/chooseseat.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/chooseseat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/moviepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/moviepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chooseseat.html" beforeDir="false" afterPath="$PROJECT_DIR$/chooseseat.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,6 +190,7 @@
     <MESSAGE value="fetch virker ikke" />
     <MESSAGE value="virker ikke helt" />
     <MESSAGE value="virker,men kan forbedres" />
-    <option name="LAST_COMMIT_MESSAGE" value="virker,men kan forbedres" />
+    <MESSAGE value="in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="in progress" />
   </component>
 </project>
