@@ -46,7 +46,7 @@ function setTable(timeSlot) {
             timeslotElement.addEventListener("click", function() {
                     const nextPage = "chooseseat.html"
                     //sessionStorage.setItem("timeslotId", timeSlot.id)
-                    sessionStorage.setItem("timeslotId", JSON.stringify( timeSlot))
+                    sessionStorage.setItem("timeslot", JSON.stringify( timeSlot))
                     window.location.href = nextPage
                 console.log("cellCont :"+cellCount+" , hall nr : "+timeSlot.hall.id)
                 }

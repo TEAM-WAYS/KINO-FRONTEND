@@ -1,7 +1,7 @@
 //const timeslotId = sessionStorage.getItem("timeslotId")
 const timeslot = JSON.parse(sessionStorage.getItem("timeslot"))
 const seatContainer = document.getElementById('seat-container');
-//console.log("timeslotId :  "+ timeslotId)
+console.log("timeslot:  "+ timeslot)
 //const urlTimeslot = "http://localhost:8080/timeslot/"+timeslotId
 const urlSeats = "http://localhost:8080/seats"
 const urlSeat = "http://localhost:8080/seat"
@@ -10,7 +10,7 @@ hallHeader.innerHTML= timeslot.hall.name
 const seatTemplate = {
     id: undefined,
     status: undefined,
-    row: undefined,
+    seatRow: undefined,
     number: undefined,
     timeslot: undefined
 }
@@ -27,12 +27,17 @@ async function start(){
     const seatsPerRow = timeslot.hall.seatsPrRow
     console.log("rows: " + rows + " , seats per row : " + seatsPerRow)
     const soldSeats =[]
-    const soldSeatsDB = await fetchAndReturn(urlSeats)
-    soldSeatsDB.fromEach(function (seat) {   // Asuming that all seats saved are seats sold
-        soldSeats.push(seat.row+"-"+seat.number)
-        }
+    try {
+        const soldSeatsDB = await fetchAndReturn(urlSeats)
+        soldSeatsDB.fromEach(function (seat) {   // Asuming that all seats saved are seats sold
+                soldSeats.push(seat.row+"-"+seat.number)
+            }
 
-    )
+        )
+    }catch (e){
+
+    }
+
     const selectedSeats = [];
     const selectedSeatTemplate = []
     const pbGoBack = document.getElementById("pbGoBack")
@@ -86,7 +91,7 @@ async function start(){
             sessionStorage.setItem("timeslot",JSON.stringify(timeslot))
             selectedSeats.forEach((seatId)=>{
                 const split = seatId.split("-")
-                seatTemplate.row = split[0]
+                seatTemplate.seatRow = split[0]
                 seatTemplate.number = split[1]
                 seatTemplate.timeslot = timeslot
                 seatTemplate.status = 1

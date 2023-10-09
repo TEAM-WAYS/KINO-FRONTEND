@@ -2,12 +2,13 @@ const timeslot = JSON.parse(sessionStorage.getItem("timeslot"))
 console.log("timeslot: "+timeslot)
 const seats = JSON.parse(sessionStorage.getItem("seats"))
 console.log("seats: "+seats)
-const element = document.getElementById("element")
+const table = document.getElementById("main-table")
 
 
+mainRowCount = 0
 seats.forEach(function(seat){
-    const ticket = document.createElement("ticket")
-    ticket.addId()
+    const ticket = document.createElement("table")
+    //ticket.classList("ticket")
 
     let rowCount = 0
     row = ticket.insertRow(rowCount++)
@@ -27,10 +28,14 @@ seats.forEach(function(seat){
     row = ticket.insertRow(rowCount++)
 
     cell = row.insertCell(cellCount++)
-    cell.innerHTML = "Row: -"+seat.row+"-"
+    cell.innerHTML = "Row: -"+seat.seatRow+"-"
 
     cell = row.insertCell(cellCount++)
     cell.innerHTML = "Seat: -"+seat.number+"-"
 
-    element.appendChild(ticket)
+    //mainRowCount = element.rows.length
+    mainRow = table.insertRow(mainRowCount++)
+    let mainCellCount = 0
+    cell = mainRow.insertCell(mainCellCount++)
+    table.appendChild(ticket)
 })
