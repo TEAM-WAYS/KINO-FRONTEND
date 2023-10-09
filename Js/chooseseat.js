@@ -7,13 +7,7 @@ const urlSeats = "http://localhost:8080/seats"
 const urlSeat = "http://localhost:8080/seat"
 const hallHeader = document.getElementById("hallname")
 hallHeader.innerHTML= timeslot.hall.name
-const seatTemplate = {
-    id: undefined,
-    status: undefined,
-    seatRow: undefined,
-    number: undefined,
-    timeslot: undefined
-}
+
 
 
 start()
@@ -91,15 +85,24 @@ async function start(){
             sessionStorage.setItem("timeslot",JSON.stringify(timeslot))
             selectedSeats.forEach((seatId)=>{
                 const split = seatId.split("-")
-                seatTemplate.seatRow = split[0]
-                seatTemplate.number = split[1]
-                seatTemplate.timeslot = timeslot
-                seatTemplate.status = 1
+                const seatTemplate = {
+                    id: undefined,
+                    status: 1,
+                    seatRow: split[0],
+                    number: split[1],
+                    timeslot: timeslot
+                }
+
                 postSeatReservation(seatTemplate)
                 selectedSeatTemplate.push(seatTemplate)
 
             })
-
+            let i = 0
+            selectedSeatTemplate.forEach((seat)=>{
+                i++
+                console.log(seat.seatRow+" XXnumberXX "+seat.number+" i "+i)
+            })
+            debugger
             sessionStorage.setItem("seats",JSON.stringify(selectedSeatTemplate))
             window.location.href = "ticket.html"
 

@@ -38,7 +38,7 @@ function setTable(timeSlot) {
     let done = false
     while(!done){
         if(cellCount+1===timeSlot.hall.id){
-            cell = row.insertCell(cellCount++)
+            let cell = row.insertCell(cellCount++)
 
             console.log("time start movie :" + timeSlot.start)
             let timeslotElement = document.createElement("timeslot")
