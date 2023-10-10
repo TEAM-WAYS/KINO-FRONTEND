@@ -1,0 +1,80 @@
+/* Main table styles */
+body{
+
+    background: url("https://cdn.pixabay.com/photo/2016/01/22/08/20/film-1155439_1280.jpg");
+    z-index: 1;
+}
+body::after {
+
+}
+#container {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Add spacing between main table and tickets */
+    background: rgba(255,255,255,0.75);
+    z-index: 2;
+
+}
+
+ .textcell{
+    border: 1px solid #ddd;
+    padding: 8px;
+
+     text-align: initial;
+
+}
+#main-table{
+
+z-index: 3;
+}
+
+/* Ticket table styles */
+.ticket{
+    z-index: 5;
+     /* or contain, depending on your preference */
+    table-layout: initial;
+    text-align: center;
+    margin: 100px;
+    border-collapse: collapse;
+
+
+
+
+}
+
+.mainrow{
+
+
+
+
+}
+.maincell{
+    background: url("https://holytrinitybridgeport.org/wp-content/uploads/2017/10/uncategorized-editable-transparent-background-of-blank-ticket-template-for-event.png") ;
+
+    height: 300px;
+    width: 645px;
+    background-size: cover;
+}
+
+
+
+/* Styling for movie, time, and hall cells */
+table td:nth-child(1),
+table td:nth-child(2),
+table td:nth-child(3) {
+    font-weight: bold;
+}
+
+/* Styling for seatRow and seatNumber cells */
+table td:nth-child(4),
+table td:nth-child(5) {
+    font-style: italic;
+}
+
+/* Optional: Add hover effect to ticket tables */
+.maincell:hover {
+
+    background: rgba(255, 255, 255, 0.1);
+
+
+}

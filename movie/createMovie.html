@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>create movie</title>
 </head>
 <body>
+<div th:replace="~{fragments/topnav :: main-nav}">
+</div>
 <h1>Insert Movie</h1>
 
 <div class="form-container">
@@ -83,6 +85,6 @@
     </form>
 </div>
 
-<script type="module" src="Js/createmovie.js"></script>
+<script type="module" src="../Js/movie/createMovie.js"></script>
 </body>
 </html>
