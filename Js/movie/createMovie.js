@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('formMovie');
     const submitButton = document.getElementById('submit');
+    const confirmationMessage = document.getElementById("confirmation-message");
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -26,6 +27,11 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(response => {
                 if (response.ok) {
                     console.log('Movie data sent successfully.');
+                    confirmationMessage.innerHTML = "Movie created successfully!";
+                    confirmationMessage.style.display = "block";
+                    setTimeout(() => {
+                        window.location.href = "showMovies.html";
+                    }, 2000);
                 } else {
                     console.error('Error sending movie data.');
                 }

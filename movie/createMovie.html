@@ -7,8 +7,9 @@
 <body>
 <div th:replace="~{fragments/topnav :: main-nav}">
 </div>
-<h1>Insert Movie</h1>
-
+<h1>Create Movie</h1>
+<div id="confirmation-message" style="display: none;">
+</div>
 <div class="form-container">
     <form action="http://localhost:8080/movies" method="post" id="formMovie">
         <div class="form-group">
