@@ -8,15 +8,15 @@
 <div class="payment-info">
 <h1>Pay for your tickets</h1>
 <div>
-    <label for="seatCount">Number of Seats:</label>
+    <label for="seatCount">Selected Seats:</label>
     <input type="number" id="seatCount" min="1" value="1" onchange="calculateTotal()">
 </div>
 <div>
     <p>Total Price: <span id="totalPrice">120 DKK</span></p>
 </div>
-<button onclick="initiatePayment()">Pay with Card</button>
+<button id="paycard" onclick="initiatePayment()">Pay with Card</button>
     <div>
-<button onclick="initiatePayment()">Pay with MobilPay </button>
+<button id="paymobil" onclick="initiatePayment()">Pay with MobilPay </button>
     </div>
 
 </div>
