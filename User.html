@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+</head>
+<body>
+<h1>Create User</h1>
+<form id="userForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <button type="button" onclick="createUser()">Create User</button>
+</form>
+
+<button onclick="redirectToDeletePage()">Delete User</button>
+
+<script>
+    function redirectToDeletePage() {
+        window.location.href = "deleteUser.html";
+    }
+</script>
+
+<script src="User.js"></script>
+
+<button onclick="redirectToUpdatePage()">Update User</button>
+
+<script>
+    function redirectToUpdatePage() {
+        window.location.href = "updateUser.html";
+    }
+</script>
+</body>
+</html>
