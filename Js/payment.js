@@ -6,7 +6,7 @@ function calculateTotal() {
    // var seatCount = parseInt(document.getElementById("seatCount").value);
     const selectedSeats = JSON.parse(sessionStorage.getItem('seats'))
     
-        fetch(urlSeat, {
+        /*fetch(urlSeat, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ function calculateTotal() {
         .catch(error => {
             console.error('Error:', error)
         })
-
+*/
 
     // Calculate the total price (we set 120 DKK per seat)
     const totalPrice = selectedSeats.length * 120;

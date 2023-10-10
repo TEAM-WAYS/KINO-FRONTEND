@@ -102,7 +102,7 @@ async function start(){
             })
             debugger
             sessionStorage.setItem("seats",JSON.stringify(selectedSeatTemplate))
-            window.location.href = "ticket.html"
+            window.location.href = "payment.html"
 
         }
     });
