@@ -6,6 +6,7 @@ const seats = JSON.parse(sessionStorage.getItem("seats"))
 console.log(sessionStorage.getItem("seats"))
 console.log("seats: "+seats)
 const mainTable = document.getElementById("main-table")
+const container = document.getElementById("container")
 let i = 0
 seats.forEach(function(seat){i++
     console.log("Seat "+seat.number+" row "+seat.seatRow+ " i : "+i+" id :"+seat.id)})
@@ -16,14 +17,15 @@ seats.forEach(function(seat){
     let seatRow = document.createElement("seatrow")
 
     const ticket = document.createElement("table")
-    //ticket.classList("ticket")
+    ticket.classList.add("ticket")
 
     let rowCount = 0
     row = ticket.insertRow(rowCount++)
 
     let cellCount = 0
-    cell = row.insertCell(cellCount++)
+    let cell = row.insertCell(cellCount++)
     cell.innerHTML = "Movie: -"+timeslot.movie.title+"-"
+    cell.classList.add("textCell")
 
 
     cell = row.insertCell(cellCount++)
@@ -45,10 +47,13 @@ seats.forEach(function(seat){
     console.log("Seat No :    -"+seat.number+"-    ")
     cell.appendChild(seatNumber)
 
-    //mainRowCount = element.rows.length
+    //container.appendChild(ticket)
+    mainRowCount = mainTable.rows.length
     mainRow = mainTable.insertRow(mainRowCount++)
+    mainRow.classList.add("mainrow")
     let mainCellCount = 0
-    cell = mainRow.insertCell(mainCellCount++)
-    mainTable.appendChild(ticket)
+    cell1 = mainRow.insertCell(mainCellCount++)
+    cell1.classList.add("maincell")
+    cell1.appendChild(ticket)
 })
 
