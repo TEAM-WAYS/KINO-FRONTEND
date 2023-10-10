@@ -8,8 +8,6 @@ const urlSeat = "http://localhost:8080/seat"
 const hallHeader = document.getElementById("hallname")
 hallHeader.innerHTML= timeslot.hall.name
 
-
-
 start()
 async function start(){
 
@@ -129,11 +127,6 @@ function postSeatReservation(seat){
     })
 
 }
-
-
-
-
-
 
 //SKAL EKSPORTEVES:
 async function fetchAnyUrl(url) {
