@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="nogenlunde" />
     <list default="true" id="8f5de06f-ca17-4b9c-8323-f83165dfbe9b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/User.html" afterDir="false" />
@@ -10,16 +9,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="package.json" />
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-        <option value="CSS File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -45,74 +34,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="" />
-      <created>1695901939653</created>
+      <changelist id="8f5de06f-ca17-4b9c-8323-f83165dfbe9b" name="Changes" comment="" />
+      <created>1696888883353</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695901939653</updated>
-      <workItem from="1695901940998" duration="1544000" />
-      <workItem from="1695975357807" duration="3014000" />
-      <workItem from="1696237898146" duration="507000" />
-      <workItem from="1696488535520" duration="2866000" />
-      <workItem from="1696673444087" duration="7591000" />
+      <updated>1696888883353</updated>
+      <workItem from="1696888885565" duration="304000" />
     </task>
-    <task id="LOCAL-00001" summary="start">
-      <created>1695902303288</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1695902303288</updated>
-    </task>
-    <task id="LOCAL-00002" summary="start">
-      <created>1695974777077</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1695974777077</updated>
-    </task>
-    <task id="LOCAL-00003" summary="start">
-      <created>1696321080751</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1696321080751</updated>
-    </task>
-    <task id="LOCAL-00004" summary="fetch virker ikke">
-      <created>1696416735694</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1696416735694</updated>
-    </task>
-    <task id="LOCAL-00005" summary="virker ikke helt">
-      <created>1696501137799</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1696501137799</updated>
-    </task>
-    <task id="LOCAL-00006" summary="virker ikke helt">
-      <created>1696503208430</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1696503208430</updated>
-    </task>
-    <task id="LOCAL-00007" summary="virker,men kan forbedres">
-      <created>1696522864325</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1696522864325</updated>
-    </task>
-    <task id="LOCAL-00008" summary="cant see if it works bco bakend error">
-      <created>1696764237143</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1696764237143</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,14 +56,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="start" />
-    <MESSAGE value="fetch virker ikke" />
-    <MESSAGE value="virker ikke helt" />
-    <MESSAGE value="virker,men kan forbedres" />
-    <MESSAGE value="in progress" />
-    <MESSAGE value="cant see if it works bco bakend error" />
-    <option name="LAST_COMMIT_MESSAGE" value="cant see if it works bco bakend error" />
   </component>
 </project>
