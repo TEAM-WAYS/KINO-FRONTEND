@@ -23,16 +23,18 @@ seats.forEach(function(seat){
     row = ticket.insertRow(rowCount++)
 
     let cellCount = 0
-    let cell = row.insertCell(cellCount++)
-    cell.innerHTML = "Movie: -"+timeslot.movie.title+"-"
+    cell = row.insertCell(cellCount++)
+    cell.innerHTML = "Movie: -"+timeslot.movie.title+"-    "
     cell.classList.add("textCell")
 
 
     cell = row.insertCell(cellCount++)
-    cell.innerHTML = "Time: -"+timeslot.start+"-"
+    cell.innerHTML = "Time: -"+timeslot.start+"-    "
+    cell.classList.add("textCell")
 
     cell = row.insertCell(cellCount++)
-    cell.innerHTML = "Hall: -"+timeslot.hall.name+"-"
+    cell.innerHTML = "Hall: -"+timeslot.hall.name+"-    "
+    cell.classList.add("textCell")
 
     cellCount = 0
     row = ticket.insertRow(rowCount++)
@@ -41,11 +43,13 @@ seats.forEach(function(seat){
     seatRow.innerHTML = "Row No:    -"+seat.seatRow+"-    "
     console.log("Row No:    -"+seat.seatRow+"-    ")
     cell.appendChild(seatRow)
+    cell.classList.add("textCell")
 
     cell = row.insertCell(cellCount++)
     seatNumber.innerHTML = "Seat No :    -"+seat.number+"-    "
     console.log("Seat No :    -"+seat.number+"-    ")
     cell.appendChild(seatNumber)
+    cell.classList.add("textCell")
 
     //container.appendChild(ticket)
     mainRowCount = mainTable.rows.length

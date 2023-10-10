@@ -34,7 +34,7 @@ body {
     font-weight: bold;
 }
 .sold {
-    background-color: #ccc;
+    background-color: #fa0303;
 }
 .available {
     background-color: #4CAF50;
@@ -64,4 +64,8 @@ body {
     justify-content: center; /* Center vertically */
     height: 170vh; /* Center in the viewport */
 
+}
+
+.selected{
+    background-color: #0021fa;
 }

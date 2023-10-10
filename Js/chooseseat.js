@@ -3,7 +3,7 @@ const timeslot = JSON.parse(sessionStorage.getItem("timeslot"))
 const seatContainer = document.getElementById('seat-container');
 console.log("timeslot:  "+ timeslot)
 //const urlTimeslot = "http://localhost:8080/timeslot/"+timeslotId
-const urlSeats = "http://localhost:8080/seats"
+const urlSeats = "http://localhost:8080/seats/"+timeslot.id
 const urlSeat = "http://localhost:8080/seat"
 const hallHeader = document.getElementById("hallname")
 hallHeader.innerHTML= timeslot.hall.name
@@ -21,15 +21,18 @@ async function start(){
     const seatsPerRow = timeslot.hall.seatsPrRow
     console.log("rows: " + rows + " , seats per row : " + seatsPerRow)
     const soldSeats =[]
+
     try {
-        const soldSeatsDB = await fetchAndReturn(urlSeats)
-        soldSeatsDB.fromEach(function (seat) {   // Asuming that all seats saved are seats sold
-                soldSeats.push(seat.row+"-"+seat.number)
-            }
+    const soldSeatsDB = await fetchAndReturn(urlSeats)
+        console.log("yyy" )
+    soldSeatsDB.forEach(function (seat) {   // Asuming that all seats saved are seats sold
+            soldSeats.push(seat.seatRow + "-" + seat.number)
+        }
 
-        )
+    )
+        console.log(soldSeats)
     }catch (e){
-
+        console.log(e)
     }
 
     const selectedSeats = [];
@@ -102,7 +105,7 @@ async function start(){
                 i++
                 console.log(seat.seatRow+" XXnumberXX "+seat.number+" i "+i)
             })
-            debugger
+
             sessionStorage.setItem("seats",JSON.stringify(selectedSeatTemplate))
             window.location.href = "ticket.html"
 
@@ -139,11 +142,12 @@ function postSeatReservation(seat){
 async function fetchAnyUrl(url) {
     try {
         const response = await fetch(url)
-        //debugger
-        if(response.ok){
+
+        if(response.ok) {
             return response.json()
             console.log("ok")
         }else {
+
             throw new Error(`HTTP error! Status: ${response.status}`)
         }
     }catch (error){
@@ -153,7 +157,11 @@ async function fetchAnyUrl(url) {
 
 }
 async function fetchAndReturn(url){
-    return something = await fetchAnyUrl(url)
+
+    const something = await fetchAnyUrl(url)
+    console.log("xxxxx")
+    console.log(something)
+    return something
 }
 
 async function fetchTimeslot(){

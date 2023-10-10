@@ -16,12 +16,12 @@ body::after {
 
 }
 
- .textcell{
+ .textCell{
     border: 1px solid #ddd;
     padding: 8px;
+     width: 100px;
 
      text-align: initial;
-
 }
 #main-table{
 
@@ -33,9 +33,10 @@ z-index: 3;
     z-index: 5;
      /* or contain, depending on your preference */
     table-layout: initial;
-    text-align: center;
-    margin: 100px;
+    align: center;
+    margin: 50px;
     border-collapse: collapse;
+    width: 500px;
 
 
 
