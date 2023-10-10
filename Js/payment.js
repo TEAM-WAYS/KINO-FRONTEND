@@ -36,14 +36,18 @@ function initiatePayment() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const payButton = document.getElementById('paycard')
-    const payButton = document.getElementById('paymobil')
-    if (payButton) {
-        payButton.addEventListener('click', function() {
+    const payCardButton = document.getElementById('paycard')
+    const payMobileButton = document.getElementById('paymobil')
+
+        payCardButton.addEventListener('click', function() {
             // Redirect to the "ticket.html" file
             window.location.href = 'ticket.html'
         });
-    }
+        payMobileButton.addEventListener('click', function() {
+            // Redirect to the "ticket.html" file
+            window.location.href = 'ticket.html'
+        });
+
 });
 
 calculateTotal()
