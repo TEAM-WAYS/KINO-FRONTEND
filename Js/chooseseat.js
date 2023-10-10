@@ -8,8 +8,6 @@ const urlSeat = "http://localhost:8080/seat"
 const hallHeader = document.getElementById("hallname")
 hallHeader.innerHTML= timeslot.hall.name
 
-
-
 start()
 async function start(){
 
@@ -107,7 +105,7 @@ async function start(){
             })
 
             sessionStorage.setItem("seats",JSON.stringify(selectedSeatTemplate))
-            window.location.href = "ticket.html"
+            window.location.href = "payment.html"
 
         }
     });
@@ -132,11 +130,6 @@ function postSeatReservation(seat){
     })
 
 }
-
-
-
-
-
 
 //SKAL EKSPORTEVES:
 async function fetchAnyUrl(url) {
