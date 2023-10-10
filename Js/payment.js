@@ -1,23 +1,49 @@
+const urlSeats = "http://localhost:8080/seats"
+const urlSeat = "http://localhost:8080/seat"
+
 function calculateTotal() {
     // Get the number of seats selected by the user
-    var seatCount = parseInt(document.getElementById("seatCount").value);
+   // var seatCount = parseInt(document.getElementById("seatCount").value);
+    const selectedSeats = JSON.parse(sessionStorage.getItem('seats'))
+    
+        fetch(urlSeat, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(seat)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Total Price:', data)
+        })
+        .catch(error => {
+            console.error('Error:', error)
+        })
 
-    // Calculate the total price (assuming 120 DKK per seat)
-    var totalPrice = seatCount * 120;
 
+    // Calculate the total price (we set 120 DKK per seat)
+    const totalPrice = selectedSeats.length * 120;
 
-    document.getElementById("totalPrice").textContent = totalPrice + " DKK";
+    document.getElementById("totalPrice").textContent = totalPrice + " DKK"
 }
 
 function initiatePayment() {
-    // You can implement the payment initiation logic here
-    // This is where you would typically redirect the user to MobilPay or your payment gateway
-    // and pass the calculated total amount.
-
-    // For this example, we'll just display an alert.
+    
     var totalPrice = parseInt(document.getElementById("totalPrice").textContent);
-    alert("You have paid " + totalPrice + " DKK. Enjoy your movie!");
+    alert("You have paid " + totalPrice + " DKK. Here are your tickt info!")
+
 }
 
-// Initialize the total price on page load
-calculateTotal();
+document.addEventListener('DOMContentLoaded', function() {
+    const payButton = document.getElementById('paycard', 'paymobil')
+
+    if (payButton) {
+        payButton.addEventListener('click', function() {
+            // Redirect to the "ticket.html" file
+            window.location.href = 'ticket.html'
+        });
+    }
+});
+
+calculateTotal()
