@@ -36,8 +36,8 @@ function initiatePayment() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const payButton = document.getElementById('paycard', 'paymobil')
-
+    const payButton = document.getElementById('paycard')
+    const payButton = document.getElementById('paymobil')
     if (payButton) {
         payButton.addEventListener('click', function() {
             // Redirect to the "ticket.html" file
