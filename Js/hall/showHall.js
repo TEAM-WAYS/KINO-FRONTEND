@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("http://localhost:8080/halls")
+    fetch("https://wayskinoxp.azurewebsites.net/halls")
         .then(response => response.json())
         .then(data => {
             const movieList = document.getElementById("hallList");
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const confirmDelete = window.confirm("Are you sure you want to delete this hall?");
 
                     if (confirmDelete) {
-                        fetch(`http://localhost:8080/halls/delete/${hall.id}`, {
+                        fetch(`https://wayskinoxp.azurewebsites.net/halls/delete/${hall.id}`, {
                             method: "DELETE",
                         })
                             .then(response => {

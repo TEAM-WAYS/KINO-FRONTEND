@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('formTimeslot');
     const confirmationMessage = document.getElementById('confirmation-message');
 
-    fetch("http://localhost:8080/halls")
+    fetch("https://wayskinoxp.azurewebsites.net/halls")
         .then(response => response.json())
         .then(data => {
             const hallSelect = document.getElementById("hall");
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error("Error fetching halls:", error);
         });
 
-    fetch("http://localhost:8080/movies")
+    fetch("https://wayskinoxp.azurewebsites.net/movies")
         .then(response => response.json())
         .then(data => {
             const movieSelect = document.getElementById("movie");
@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
 
         const formData = {
+            date: document.getElementById('date').value,
             start: document.getElementById('start').value,
             end: document.getElementById('end').value,
             hall: document.getElementById('hall').value,
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         console.log('FormData:', formData);
-        fetch('http://localhost:8080/timeslots', {
+        fetch('https://wayskinoxp.azurewebsites.net/timeslots', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

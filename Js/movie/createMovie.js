@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         console.log('FormData:', formData);
-        fetch('http://localhost:8080/movies', {
+        fetch('https://wayskinoxp.azurewebsites.net/movies', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

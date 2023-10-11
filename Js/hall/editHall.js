@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const hallId = urlParams.get("id");
     const confirmationMessage = document.getElementById("confirmation-message");
 
-    fetch(`http://localhost:8080/halls/${hallId}`)
+    fetch(`https://wayskinoxp.azurewebsites.net/halls/${hallId}`)
         .then(response => response.json())
         .then(data => {
 

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const movieId = urlParams.get("id");
     const confirmationMessage = document.getElementById("confirmation-message");
 
-    fetch(`http://localhost:8080/movies/${movieId}`)
+    fetch(`https://wayskinoxp.azurewebsites.net/movies/${movieId}`)
         .then(response => response.json())
         .then(data => {
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updatedMovieData.id = movieId;
 
         console.log(updatedMovieData)
-        fetch(`http://localhost:8080/movies`, {
+        fetch(`https://wayskinoxp.azurewebsites.net/movies`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
