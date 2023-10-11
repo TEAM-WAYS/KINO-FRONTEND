@@ -4,12 +4,14 @@ const movie = JSON.parse(sessionStorage.getItem("movie"))
 console.log("movie id:"+movie.id)
 const movieTitle = document.getElementById("movietitle")
 movieTitle.innerText = movie.title
-const table = document.getElementById("table")
+const mainTable = document.getElementById("table")
 //const row = document.getElementById("row")
 const pbGoBack = document.getElementById("pbGoBack")
 const urlMovies = "http://localhost:8080/movies"
 const urlHalls = "http://localhost:8080/halls"
 const urlTimeslots = "http://localhost:8080/timeslots"
+const urlTimeSort = "http://localhost:8080/timeslots/sort"
+const today = new Date()
 
 let halls = []
 let timeslots = []
@@ -24,7 +26,7 @@ function showHalls(hall){
     cell.innerHTML = hall.name
     cell.classList.add("tablehead")
 }
-async function setHeader(){
+async function setHeader(table){
     let rowCount = table.rows.length
     row = table.insertRow(rowCount)
     halls = await fetchhalls()
@@ -32,41 +34,56 @@ async function setHeader(){
     rowCount = table.rows.length
     row = table.insertRow(rowCount)
     cellCount = 0
+    fetchAnyUrl(urlTimeSort) // skal flyttes til post timeslot
 }
 
+let plusDays = -1
+const day = new Date()
+day.setDate(today.getDate()+plusDays)
+const table = document.createElement("table")
 
 function setTable(timeSlot) {
 
-    let rowCount = table.rows.length
-    let done = false
-    while(!done){
-        if(cellCount+1===timeSlot.hall.id){
-            let cell = row.insertCell(cellCount++)
+    if(timeSlot.date !== day) {
+        const mainRow = mainTable.insertRow()
+        const mainCell= mainRow.insertCell()
+        mainCell.innerText = day.toString() +"/n"
+        mainCell.appendChild(table)
 
-            console.log("time start movie :" + timeSlot.start)
-            let timeslotElement = document.createElement("timeslot")
-            timeslotElement.classList.add("timeslot")
-            timeslotElement.addEventListener("click", function() {
-                    const nextPage = "chooseseat.html"
-                    //sessionStorage.setItem("timeslotId", timeSlot.id)
-                    sessionStorage.setItem("timeslot", JSON.stringify( timeSlot))
-                    window.location.href = nextPage
-                console.log("cellCont :"+cellCount+" , hall nr : "+timeSlot.hall.id)
-                }
-            )
-            timeslotElement.innerHTML = timeSlot.start
-            cell.append(timeslotElement)
-            row = table.insertRow(rowCount)
-            cellCount = 0
-            done = true
-            console.log("Done?: "+done)
-        }else {
-
-            cell = row.insertCell(cellCount++)
-
-            console.log("cellCont :"+cellCount+" , hall nr : "+timeSlot.hall.id)
-        }
+        setHeader(table)
+        day.setDate(today.getDate() + plusDays++)
     }
+
+        let rowCount = table.rows.length
+        let done = false
+        while (!done) {
+            if (cellCount + 1 === timeSlot.hall.id) {
+                let cell = row.insertCell(cellCount++)
+
+                console.log("time start movie :" + timeSlot.start)
+                let timeslotElement = document.createElement("timeslot")
+                timeslotElement.classList.add("timeslot")
+                timeslotElement.addEventListener("click", function () {
+                        const nextPage = "chooseseat.html"
+                        //sessionStorage.setItem("timeslotId", timeSlot.id)
+                        sessionStorage.setItem("timeslot", JSON.stringify(timeSlot))
+                        window.location.href = nextPage
+                        console.log("cellCont :" + cellCount + " , hall nr : " + timeSlot.hall.id)
+                    }
+                )
+                timeslotElement.innerHTML = timeSlot.start
+                cell.append(timeslotElement)
+                row = table.insertRow(rowCount)
+                cellCount = 0
+                done = true
+                console.log("Done?: " + done)
+            } else {
+
+                cell = row.insertCell(cellCount++)
+
+                console.log("cellCont :" + cellCount + " , hall nr : " + timeSlot.hall.id)
+            }
+        }
 
 
 }
@@ -121,5 +138,5 @@ function filter(timeslot){
 
 }
 
-setHeader()
+
 fetchTimeslots()
