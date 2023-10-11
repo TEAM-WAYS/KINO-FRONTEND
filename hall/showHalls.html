@@ -7,8 +7,7 @@
   <link rel="stylesheet" type="text/css" href="../css/topNav.css">
 </head>
 <body>
-<div th:replace="~{fragments/topnav :: admin-nav}">
-</div>
+<div id="topNavContainer"></div>
 <h1>Show Halls</h1>
 
 <a href="createHall.html" class="create-hall-button">Create New Hall</a>
@@ -18,5 +17,6 @@
 </div>
 
 <script type="module" src="../Js/hall/showHall.js"></script>
+<script type="module" src="../Js/topnav/loadAdminNav.js"></script>
 </body>
 </html>

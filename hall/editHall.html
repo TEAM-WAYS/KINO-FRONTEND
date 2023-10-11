@@ -7,8 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/topNav.css">
 </head>
 <body>
-<div th:replace="~{fragments/topnav :: admin-nav}">
-</div>
+<div id="topNavContainer"></div>
 
 <h1>Edit Hall</h1>
 <div id="confirmation-message" style="display: none;">
@@ -39,5 +38,6 @@
 </div>
 
 <script type="module" src="../Js/hall/editHall.js"></script>
+<script type="module" src="../Js/topnav/loadAdminNav.js"></script>
 </body>
 </html>

@@ -7,8 +7,7 @@
   <link rel="stylesheet" type="text/css" href="../css/topNav.css">
 </head>
 <body>
-<div th:replace="~{fragments/topnav :: admin-nav}">
-</div>
+<div id="topNavContainer"></div>
 <h1>Show Movies</h1>
 
 <a href="createMovie.html" class="create-movie-button">Create New Movie</a>
@@ -18,5 +17,6 @@
 </div>
 
 <script type="module" src="../Js/movie/showMovies.js"></script>
+<script type="module" src="../Js/topnav/loadAdminNav.js"></script>
 </body>
 </html>
