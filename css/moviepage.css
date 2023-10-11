@@ -1,0 +1,73 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+body {
+    background: url("https://cdn.pixabay.com/photo/2016/01/22/08/20/film-1155439_1280.jpg");
+    padding: 50px;
+
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+.tablehead,
+#table td {
+
+    padding: 10px;
+    text-align: center;
+}
+.tablehead{
+    border: 1px solid #ddd;
+    background-color: rgba(245, 239, 239, 0.5)
+}
+
+#table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*#table tr:nth-child(even) {
+    background-color: rgba(245, 239, 239, 0.5);
+
+}*/
+
+
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: solid;
+    border: black;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+#table .timeslot  {
+    background-color: #3bf109; /* Green for timeslots */
+    border-radius: 20px; /* Add rounded corners */
+    padding: 8px;
+    opacity: 90%;
+    border: 1px solid black;
+
+}
+#table .timeslot:hover {
+    background-color: #37da07;
+}

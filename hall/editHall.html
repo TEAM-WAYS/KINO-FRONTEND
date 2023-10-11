@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Hall</title>
+    <link rel="stylesheet" type="text/css" href="../css/hall/editHall.css">
+    <link rel="stylesheet" type="text/css" href="../css/topNav.css">
+</head>
+<body>
+<div th:replace="~{fragments/topnav :: admin-nav}">
+</div>
+
+<h1>Edit Hall</h1>
+<div id="confirmation-message" style="display: none;">
+</div>
+
+<div id="editHallForm">
+    <form id="hallEditForm">
+        <div class="form-group">
+            <label for="editRows">Rows</label>
+            <input type="number" id="editRows" name="Rows" required>
+        </div>
+        <div class="form-group">
+            <label for="editSeats">Seats</label>
+            <input type="number" id="editSeats" name="Seats" required>
+        </div>
+        <div class="form-group">
+            <label for="editScreenSize">Screensize</label>
+            <input type="number" id="editScreenSize" name="Screensize" required>
+        </div>
+        <div class="form-group">
+            <label for="editName">Name</label>
+            <input type="text" id="editName" name="hallName" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Save Changes</button>
+        </div>
+    </form>
+</div>
+
+<script type="module" src="../Js/hall/editHall.js"></script>
+</body>
+</html>

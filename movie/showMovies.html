@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Show Movies</title>
+  <link rel="stylesheet" type="text/css" href="../css/movie/showMovies.css">
+  <link rel="stylesheet" type="text/css" href="../css/topNav.css">
+</head>
+<body>
+<div th:replace="~{fragments/topnav :: admin-nav}">
+</div>
+<h1>Show Movies</h1>
+
+<a href="createMovie.html" class="create-movie-button">Create New Movie</a>
+
+<div id="movieList">
+
+</div>
+
+<script type="module" src="../Js/movie/showMovies.js"></script>
+</body>
+</html>

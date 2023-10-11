@@ -1,0 +1,23 @@
+body{
+
+    background: url("https://cdn.pixabay.com/photo/2016/01/22/08/20/film-1155439_1280.jpg");
+    padding: 50px;
+    align-content: center;
+    z-index: 1;
+}
+
+img{
+    width: 90%;
+    height: auto;
+    margin: 5%;
+}
+td{
+    width: 33%;
+    height: fit-content;
+    align-content: center;
+    /*border: 1px solid blue;*/
+}
+table{
+
+    width: 90%;
+}
