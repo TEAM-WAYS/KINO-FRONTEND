@@ -5,10 +5,9 @@ body {
     background-color: #f2f2f2;
 }
 body {
-    background-image: url("https://photos.lensculture.com/medium/d7152bb2-0276-4ecc-94b6-259ea077cd70.jpg");
-    background-size: cover; /* Adjust to your preference */
-    background-position: center center; /* Adjust to your preference */
-    background-repeat: no-repeat; /* Prevent image from repeating */
+    background: url("https://cdn.pixabay.com/photo/2016/01/22/08/20/film-1155439_1280.jpg");
+    padding: 50px;
+
 }
 
 .container {
@@ -20,13 +19,18 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    border: 1px solid #ddd;
 }
 
-#table th,
+.tablehead,
 #table td {
-    border: 1px solid #ddd;
+
     padding: 10px;
     text-align: center;
+}
+.tablehead{
+    border: 1px solid #ddd;
+    background-color: rgba(245, 239, 239, 0.5)
 }
 
 #table th {
@@ -34,18 +38,13 @@ body {
     color: white;
 }
 
-#table tr:nth-child(even) {
-    background-color: rgba(245, 239, 239, 0.5);;
+/*#table tr:nth-child(even) {
+    background-color: rgba(245, 239, 239, 0.5);
 
-}
+}*/
 
-#table td.available {
-    background-color: #99FF99; /* Green for available seats */
-}
 
-#table td.booked {
-    background-color: #FF9999; /* Red for booked seats */
-}
+
 
 button {
     padding: 10px 20px;
@@ -53,7 +52,8 @@ button {
     cursor: pointer;
     background-color: #4CAF50;
     color: white;
-    border: none;
+    border: solid;
+    border: black;
     border-radius: 5px;
 }
 
@@ -65,4 +65,9 @@ button:hover {
     border-radius: 20px; /* Add rounded corners */
     padding: 8px;
     opacity: 90%;
+    border: 1px solid black;
+
+}
+#table .timeslot:hover {
+    background-color: #37da07;
 }

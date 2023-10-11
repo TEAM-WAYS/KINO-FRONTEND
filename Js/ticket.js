@@ -7,6 +7,7 @@ console.log(sessionStorage.getItem("seats"))
 console.log("seats: "+seats)
 const mainTable = document.getElementById("main-table")
 const container = document.getElementById("container")
+const pbReturnToStart = document.getElementById("pbReturnToStart")
 let i = 0
 seats.forEach(function(seat){i++
     console.log("Seat "+seat.number+" row "+seat.seatRow+ " i : "+i+" id :"+seat.id)})
@@ -59,5 +60,9 @@ seats.forEach(function(seat){
     cell1 = mainRow.insertCell(mainCellCount++)
     cell1.classList.add("maincell")
     cell1.appendChild(ticket)
+})
+pbReturnToStart.addEventListener("click",function (){
+    window.location.href("frontpage.html")
+    sessionStorage.clear()
 })
 

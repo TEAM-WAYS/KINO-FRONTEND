@@ -1,8 +1,9 @@
 <!--See movie details, when is playing, and select-->
-const movieId = sessionStorage.getItem("movieid")
-console.log("movie id:"+movieId)
+const movie = JSON.parse(sessionStorage.getItem("movie"))
 
-
+console.log("movie id:"+movie.id)
+const movieTitle = document.getElementById("movietitle")
+movieTitle.innerText = movie.title
 const table = document.getElementById("table")
 //const row = document.getElementById("row")
 const pbGoBack = document.getElementById("pbGoBack")
@@ -15,11 +16,13 @@ let timeslots = []
 let filteredTimeslots = []
 
 
+
 let row
 let cellCount = 0
 function showHalls(hall){
     const cell = row.insertCell(cellCount++)
     cell.innerHTML = hall.name
+    cell.classList.add("tablehead")
 }
 async function setHeader(){
     let rowCount = table.rows.length
@@ -107,11 +110,12 @@ pbGoBack.addEventListener("click", function(){goBack()})
 
 function goBack(){
     window.location.href = "frontpage.html"
+    sessionStorage.clear()
 }
 function filter(timeslot){
 
     console.log("timeslot.movie: "+timeslot.movie.id)
-    if (timeslot.movie.id == movieId){
+    if (timeslot.movie.id == movie.id){
         filteredTimeslots.push(timeslot)
     }
 
