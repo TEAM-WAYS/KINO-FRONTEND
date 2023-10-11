@@ -1,9 +1,9 @@
 <!--See movie details, when is playing, and select-->
-const movie = JSON.parse(sessionStorage.getItem("movie"))
+const hall = JSON.parse(sessionStorage.getItem("movie"))
 
-console.log("movie id:"+movie.id)
+console.log("movie id:"+hall.id)
 const movieTitle = document.getElementById("movietitle")
-movieTitle.innerText = movie.title
+movieTitle.innerText = hall.title
 const table = document.getElementById("table")
 //const row = document.getElementById("row")
 const pbGoBack = document.getElementById("pbGoBack")
@@ -115,7 +115,7 @@ function goBack(){
 function filter(timeslot){
 
     console.log("timeslot.movie: "+timeslot.movie.id)
-    if (timeslot.movie.id == movie.id){
+    if (timeslot.movie.id == hall.id){
         filteredTimeslots.push(timeslot)
     }
 

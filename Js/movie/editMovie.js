@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     return response.text();
                 }
             })
-//i made a mistake in backend so it doesn't send return message in JSON format on put request this is a workaround
             .then((data) => {
                 if (typeof data === "object") {
                     console.log("Movie updated successfully:", data);
@@ -72,27 +71,5 @@ document.addEventListener("DOMContentLoaded", () => {
                     }, 2000);
                 }
             })
-
-            /*
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error("Update request failed");
-                }
-                return response.json();
-            })
-            .then((data) => {
-                console.log("Movie updated successfully:", data);
-                confirmationMessage.innerHTML = "Movie updated successfully!";
-                confirmationMessage.style.display = "block";
-                setTimeout(() => {
-                    window.location.href = "showMovies.html";
-                }, 2000);
-
-            })
-            .catch((error) => {
-                console.error("Error updating movie:", error);
-            });
-
-             */
     });
 });

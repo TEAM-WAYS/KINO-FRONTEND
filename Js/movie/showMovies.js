@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 editButton.textContent = "Edit";
                 editButton.href = `editMovie.html?id=${movie.id}`;
 
-                const deleteButton = document.createElement("a");
+                const deleteButton = document.createElement("deleteButton");
                 deleteButton.textContent = "Delete";
                 deleteButton.addEventListener("click", () => {
                     const confirmDelete = window.confirm("Are you sure you want to delete this movie?");
