@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Timeslot</title>
+  <link rel="stylesheet" type="text/css" href="../css/timeslot/timeslot.css">
+  <link rel="stylesheet" type="text/css" href="../css/topNav.css">
+</head>
+<body>
+<div th:replace="~{fragments/topnav :: admin-nav}">
+</div>
+<h1>Create Timeslot</h1>
+<div id="confirmation-message" style="display: none;"></div>
+<div class="form-container">
+  <form action="http://localhost:8080/timeslots" method="post" id="formTimeslot">
+    <div class="form-group">
+      <label for="start">Start Time</label>
+      <input type="time" id="start" name="start" required>
+    </div>
+    <div class="form-group">
+      <label for="end">End Time</label>
+      <input type="time" id="end" name="end" required>
+    </div>
+    <div class="form-group">
+      <label for="hall">Hall</label>
+      <select id="hall" name="hall" required>
+
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="movie">Movie</label>
+      <select id="movie" name="movie" required>
+
+      </select>
+    </div>
+    <button type="submit">Create Timeslot</button>
+  </form>
+</div>
+<script type="module" src="../Js/timeslot/createTimeslot.js"></script>
+</body>
+</html>

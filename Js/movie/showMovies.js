@@ -36,6 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 editButton.textContent = "Edit";
                 editButton.href = `editMovie.html?id=${movie.id}`;
 
+                const assignTimeslotButton = document.createElement("a");
+                assignTimeslotButton.textContent = "Assign Timeslot";
+                assignTimeslotButton.href = `assignTimeslot.html?movieId=${movie.id}`;
+
                 const deleteButton = document.createElement("deleteButton");
                 deleteButton.textContent = "Delete";
                 deleteButton.addEventListener("click", () => {
@@ -65,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 movieDiv.appendChild(description);
                 movieDiv.appendChild(pegi);
                 movieDiv.appendChild(editButton);
+                movieDiv.appendChild(assignTimeslotButton);
                 movieDiv.appendChild(deleteButton);
                 movieList.appendChild(movieDiv);
             });
