@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('formTimeslot');
+    const form = document.getElementById('timeslotForm');
     const confirmationMessage = document.getElementById('confirmation-message');
     const hallSelect = document.getElementById("hall");
-    const movieSelect = document.getElementById("movie");
+    const url = new URL(window.location.href);
+    const movieId = url.searchParams.get("movieId");
+    document.getElementById("movieId").value = movieId;
 
     function fetchSelectedHall() {
         const selectedHallId = hallSelect.options[hallSelect.selectedIndex].value;
@@ -11,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function fetchSelectedMovie() {
-        const selectedMovieId = movieSelect.options[movieSelect.selectedIndex].value;
+        const selectedMovieId = movieId;
         return fetch(`https://wayskinoxp.azurewebsites.net/movies/${selectedMovieId}`)
             .then(response => response.json());
     }
@@ -19,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch("https://wayskinoxp.azurewebsites.net/halls")
         .then(response => response.json())
         .then(data => {
-            const hallSelect = document.getElementById("hall");
             data.forEach(hall => {
                 const option = document.createElement("option");
                 option.value = hall.id;
@@ -31,32 +32,21 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error("Error fetching halls:", error);
         });
 
-    fetch("https://wayskinoxp.azurewebsites.net/movies")
-        .then(response => response.json())
-        .then(data => {
-            const movieSelect = document.getElementById("movie");
-            data.forEach(movie => {
-                const option = document.createElement("option");
-                option.value = movie.id;
-                option.textContent = movie.title;
-                movieSelect.appendChild(option);
-            });
-        })
-        .catch(error => {
-            console.error("Error fetching movies:", error);
-        });
-
     form.addEventListener('submit', function (e) {
         e.preventDefault();
+
+        const date = document.getElementById('date').value;
+        const start = document.getElementById('startTime').value;
+        const end = document.getElementById('endTime').value;
 
         Promise.all([fetchSelectedHall(), fetchSelectedMovie()])
             .then(([selectedHall, selectedMovie]) => {
                 const formData = {
-                    date: document.getElementById('date').value,
-                    start: document.getElementById('start').value,
-                    end: document.getElementById('end').value,
-                    hall: selectedHall,
-                    movie: selectedMovie
+                    date: date,
+                    start: start,
+                    end: end,
+                    hall: selectedHall, // Updated to use the selected hall object
+                    movie: selectedMovie, // Updated to use the selected movie object
                 };
 
                 console.log('FormData:', formData);
@@ -85,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     });
             })
             .catch(error => {
-                console.error('Error fetching hall or movie:', error);
+                console.error('Error fetching hall and movie details:', error);
             });
     });
 });
