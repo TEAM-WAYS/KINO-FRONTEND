@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("http://localhost:8080/movies")
+    fetch("https://wayskinoxp.azurewebsites.net/movies")
         .then(response => response.json())
         .then(data => {
             const movieList = document.getElementById("movieList");
@@ -36,13 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 editButton.textContent = "Edit";
                 editButton.href = `editMovie.html?id=${movie.id}`;
 
-                const deleteButton = document.createElement("a");
+                const assignTimeslotButton = document.createElement("a");
+                assignTimeslotButton.textContent = "Assign Timeslot";
+                assignTimeslotButton.href = `assignTimeslot.html?movieId=${movie.id}`;
+
+                const deleteButton = document.createElement("deleteButton");
                 deleteButton.textContent = "Delete";
                 deleteButton.addEventListener("click", () => {
                     const confirmDelete = window.confirm("Are you sure you want to delete this movie?");
 
                     if (confirmDelete) {
-                        fetch(`http://localhost:8080/movies/delete/${movie.id}`, {
+                        fetch(`https://wayskinoxp.azurewebsites.net/movies/delete/${movie.id}`, {
                             method: "DELETE",
                         })
                             .then(response => {
@@ -65,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 movieDiv.appendChild(description);
                 movieDiv.appendChild(pegi);
                 movieDiv.appendChild(editButton);
+                movieDiv.appendChild(assignTimeslotButton);
                 movieDiv.appendChild(deleteButton);
                 movieList.appendChild(movieDiv);
             });

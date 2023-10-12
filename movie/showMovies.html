@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Show Movies</title>
+  <link rel="stylesheet" type="text/css" href="../css/movie/showMovies.css">
+  <link rel="stylesheet" type="text/css" href="../css/topNav.css">
 </head>
 <body>
-<div th:replace="~{fragments/topnav :: main-nav}">
-</div>
+<div id="topNavContainer"></div>
 <h1>Show Movies</h1>
 
 <a href="createMovie.html" class="create-movie-button">Create New Movie</a>
@@ -16,5 +17,6 @@
 </div>
 
 <script type="module" src="../Js/movie/showMovies.js"></script>
+<script type="module" src="../Js/topnav/loadAdminNav.js"></script>
 </body>
 </html>

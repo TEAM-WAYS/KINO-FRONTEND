@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('formMovie');
+    const form = document.getElementById('formHalls');
     const submitButton = document.getElementById('submit');
     const confirmationMessage = document.getElementById("confirmation-message");
 
@@ -7,17 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
 
         const formData = {
-            title: document.getElementById('inpTitle').value,
-            duration: parseInt(document.getElementById('inpDuration').value),
-            director: document.getElementById('inpDirector').value,
-            image: document.getElementById('inpImage').value,
-            genre: document.getElementById('inpGenre').value,
-            description: document.getElementById('inpDescription').value,
-            pegi: document.getElementById('inpPegi').value
+            numberOfRows: parseInt(document.getElementById('inpRows').value),
+            seatsPrRow: parseInt(document.getElementById('inpSeatsPerRow').value),
+            screenSize: parseInt(document.getElementById('inpScreenSize').value),
+            hallName: document.getElementById('inpName').value
         };
 
         console.log('FormData:', formData);
-        fetch('https://wayskinoxp.azurewebsites.net/movies', {
+        fetch('https://wayskinoxp.azurewebsites.net/halls', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -26,14 +23,14 @@ document.addEventListener('DOMContentLoaded', function () {
         })
             .then(response => {
                 if (response.ok) {
-                    console.log('Movie data sent successfully.');
-                    confirmationMessage.innerHTML = "Movie created successfully!";
+                    console.log('Hall data sent successfully.');
+                    confirmationMessage.innerHTML = "Hall created successfully!";
                     confirmationMessage.style.display = "block";
                     setTimeout(() => {
-                        window.location.href = "showMovies.html";
+                        window.location.href = "showHalls.html";
                     }, 2000);
                 } else {
-                    console.error('Error sending movie data.');
+                    console.error('Error sending hall data.');
                 }
             })
             .catch(error => {

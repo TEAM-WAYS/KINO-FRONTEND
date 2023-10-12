@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Movie</title>
+    <link rel="stylesheet" type="text/css" href="../css/movie/editMovie.css">
+    <link rel="stylesheet" type="text/css" href="../css/topNav.css">
 </head>
 <body>
-<div th:replace="~{fragments/topnav :: main-nav}">
-</div>
+<div id="topNavContainer"></div>
 
 <h1>Edit Movie</h1>
 <div id="confirmation-message" style="display: none;">
@@ -19,27 +20,27 @@
             <input type="text" id="editTitle" name="Title" required>
         </div>
         <div class="form-group">
-            <label for="editTitle">Duration</label>
+            <label for="editDuration">Duration</label>
             <input type="number" id="editDuration" name="Duration" required>
         </div>
         <div class="form-group">
-            <label for="editTitle">Director</label>
+            <label for="editDirector">Director</label>
             <input type="text" id="editDirector" name="Director" required>
         </div>
         <div class="form-group">
-            <label for="editTitle">Image</label>
+            <label for="editImage">Image</label>
             <input type="text" id="editImage" name="Image" required>
         </div>
         <div class="form-group">
-            <label for="editTitle">Genre</label>
+            <label for="editGenre">Genre</label>
             <input type="text" id="editGenre" name="Genre" required>
         </div>
         <div class="form-group">
-            <label for="editTitle">Description</label>
+            <label for="editDescription">Description</label>
             <input type="text" id="editDescription" name="Description" required>
         </div>
         <div class="form-group">
-            <label for="editTitle">Pegi</label>
+            <label for="editPegi">Pegi</label>
             <input type="text" id="editPegi" name="Pegi" required>
         </div>
         <div class="form-group">
@@ -49,5 +50,6 @@
 </div>
 
 <script type="module" src="../Js/movie/editMovie.js"></script>
+<script type="module" src="../Js/topnav/loadAdminNav.js"></script>
 </body>
 </html>
