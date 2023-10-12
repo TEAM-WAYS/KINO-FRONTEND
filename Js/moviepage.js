@@ -10,6 +10,7 @@ const pbGoBack = document.getElementById("pbGoBack")
 const urlMovies = "http://localhost:8080/movies"
 const urlHalls = "http://localhost:8080/halls"
 const urlTimeslots = "http://localhost:8080/timeslots"
+const urlSortTimeslots = "http://localhost:8080/timeslot/sort" //skal flyttes
 
 let halls = []
 let timeslots = []
@@ -32,6 +33,7 @@ async function setHeader(){
     rowCount = table.rows.length
     row = table.insertRow(rowCount)
     cellCount = 0
+    await fetchAnyUrl(urlSortTimeslots) // skal lyttes til post timeslots
 }
 
 
