@@ -1,81 +1,79 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('timeslotForm');
     const confirmationMessage = document.getElementById('confirmation-message');
-    const hallSelect = document.getElementById("hall");
-    const url = new URL(window.location.href);
-    const movieId = url.searchParams.get("movieId");
-    document.getElementById("movieId").value = movieId;
+    const hallSelect = document.getElementById('hall');
+    const movieId = new URLSearchParams(window.location.search).get('movieId');
+    document.getElementById('movieId').value = movieId;
 
-    function fetchSelectedHall() {
-        const selectedHallId = hallSelect.options[hallSelect.selectedIndex].value;
-        return fetch(`https://wayskinoxp.azurewebsites.net/halls/${selectedHallId}`)
-            .then(response => response.json());
+    async function fetchJson(url) {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Error fetching data from ${url}`);
+        }
+        return response.json();
     }
 
-    function fetchSelectedMovie() {
-        const selectedMovieId = movieId;
-        return fetch(`https://wayskinoxp.azurewebsites.net/movies/${selectedMovieId}`)
-            .then(response => response.json());
-    }
-
-    fetch("https://wayskinoxp.azurewebsites.net/halls")
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(hall => {
-                const option = document.createElement("option");
+    //hall dropdown
+    async function populateHallOptions() {
+        try {
+            const halls = await fetchJson('https://wayskinoxp.azurewebsites.net/halls');
+            halls.forEach((hall) => {
+                const option = document.createElement('option');
                 option.value = hall.id;
                 option.textContent = hall.hallName;
                 hallSelect.appendChild(option);
             });
-        })
-        .catch(error => {
-            console.error("Error fetching halls:", error);
-        });
+        } catch (error) {
+            console.error('Error fetching halls:', error);
+        }
+    }
 
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const date = document.getElementById('date').value;
         const start = document.getElementById('startTime').value;
         const end = document.getElementById('endTime').value;
 
-        Promise.all([fetchSelectedHall(), fetchSelectedMovie()])
-            .then(([selectedHall, selectedMovie]) => {
-                const formData = {
-                    date: date,
-                    start: start,
-                    end: end,
-                    hall: selectedHall, // Updated to use the selected hall object
-                    movie: selectedMovie, // Updated to use the selected movie object
-                };
+        try {
+            const selectedHallId = hallSelect.value;
+            const [selectedHall, selectedMovie] = await Promise.all([
+                fetchJson(`https://wayskinoxp.azurewebsites.net/halls/${selectedHallId}`),
+                fetchJson(`https://wayskinoxp.azurewebsites.net/movies/${movieId}`),
+            ]);
 
-                console.log('FormData:', formData);
+            const formData = {
+                date,
+                start,
+                end,
+                hall: selectedHall,
+                movie: selectedMovie,
+            };
 
-                fetch('https://wayskinoxp.azurewebsites.net/timeslots', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                })
-                    .then(response => {
-                        if (response.ok) {
-                            console.log('Timeslot data sent successfully.');
-                            confirmationMessage.innerHTML = "Timeslot created successfully!";
-                            confirmationMessage.style.display = "block";
-                            setTimeout(() => {
-                                window.location.href = "../movie/showMovies.html";
-                            }, 2000);
-                        } else {
-                            console.error('Error sending timeslot data.');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
-            })
-            .catch(error => {
-                console.error('Error fetching hall and movie details:', error);
+            console.log('FormData:', formData);
+
+            const response = await fetch('https://wayskinoxp.azurewebsites.net/timeslots', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
             });
+
+            if (response.ok) {
+                console.log('Timeslot data sent successfully.');
+                confirmationMessage.textContent = 'Timeslot created successfully!';
+                confirmationMessage.style.display = 'block';
+                setTimeout(() => {
+                    window.location.href = '../movie/showMovies.html';
+                }, 2000);
+            } else {
+                console.error('Error sending timeslot data.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
     });
+
+    populateHallOptions();
 });
