@@ -3,17 +3,17 @@ const timeslot = JSON.parse(sessionStorage.getItem("timeslot"))
 const seatContainer = document.getElementById('seat-container');
 console.log("timeslot:  "+ timeslot)
 //const urlTimeslot = "http://localhost:8080/timeslot/"+timeslotId
-const urlSeats = "http://localhost:8080/seats/"+timeslot.id
-const urlSeat = "http://localhost:8080/seat"
+const urlSeats = "https://wayskinoxp.azurewebsites.net/seats/"+timeslot.id
+const urlSeat = "https://wayskinoxp.azurewebsites.net/seat"
 const hallHeader = document.getElementById("hallname")
-hallHeader.innerHTML= timeslot.hall.name
+hallHeader.innerHTML= timeslot.hall.hallName
 
 start()
 async function start(){
 
     //const timeslot = await fetchTimeslot()
     console.log("timeslot: " + timeslot.start)
-    console.log("Hall : " + timeslot.hall.name)
+    console.log("Hall : " + timeslot.hall.hallName)
     console.log("Hall size : " + timeslot.hall.seatsPrRow+" x "+timeslot.hall.numberOfRows)
     const rows = timeslot.hall.numberOfRows
     const seatsPerRow = timeslot.hall.seatsPrRow
