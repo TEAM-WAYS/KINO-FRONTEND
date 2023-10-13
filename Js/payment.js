@@ -34,29 +34,15 @@ const selectedSeats = JSON.parse(sessionStorage.getItem('seats'))
         document.getElementById("totalPrice").textContent = totalPrice + " DKK";
     }
 
-function initiatePayment() {
-    
-    const totalPrice = parseInt(document.getElementById("totalPrice").textContent);
-    window.location.href = "ticket.html"
-    alert("You have paid " + totalPrice + " DKK. Here are your tickt info!")
-
-}
-//fetchSeatCount();
-
 document.addEventListener('DOMContentLoaded', function() {
+    const confirmButton = document.getElementById('confirmbutton');
 
-
-
-
-
+    confirmButton.addEventListener('click', function() {
+        const totalPrice = parseInt(document.getElementById("totalPrice").textContent);
+        alert("You have paid " + totalPrice + " DKK. Here are your ticket info!");
+        window.location.href = "ticket.html";
+    });
 });
-
-const confirmButton = document.getElementById('confirm-button')
-
-confirmButton.addEventListener('click', function() {
-    // Redirect to the "ticket.html" file
-    window.location.href = "ticket.html"
-})
 
 
 
