@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updatedHallData.id = hallId;
 
         console.log(updatedHallData)
-        fetch(`http://localhost:8080/halls`, {
+        fetch(`https://wayskinoxp.azurewebsites.net/halls`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
