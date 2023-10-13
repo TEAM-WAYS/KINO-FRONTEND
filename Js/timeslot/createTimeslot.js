@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(response => response.json());
     }
 
+    //hall dropdown
     fetch("https://wayskinoxp.azurewebsites.net/halls")
         .then(response => response.json())
         .then(data => {
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error("Error fetching halls:", error);
         });
 
+    //movie dropdown
     fetch("https://wayskinoxp.azurewebsites.net/movies")
         .then(response => response.json())
         .then(data => {

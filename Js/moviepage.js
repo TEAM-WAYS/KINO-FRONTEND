@@ -1,19 +1,29 @@
 <!--See movie details, when is playing, and select-->
-const hall = JSON.parse(sessionStorage.getItem("movie"))
+const movie = JSON.parse(sessionStorage.getItem("movie"))
 
-console.log("movie id:"+hall.id)
+console.log("movie id:"+movie.id)
 const movieTitle = document.getElementById("movietitle")
-movieTitle.innerText = hall.title
+movieTitle.innerText = movie.title
 const table = document.getElementById("table")
 //const row = document.getElementById("row")
 const pbGoBack = document.getElementById("pbGoBack")
-const urlMovies = "http://localhost:8080/movies"
-const urlHalls = "http://localhost:8080/halls"
-const urlTimeslots = "http://localhost:8080/timeslots"
+const urlMovies = "https://wayskinoxp.azurewebsites.net/movies"
+const urlHalls = "https://wayskinoxp.azurewebsites.net/halls"
+const urlTimeslots = "https://wayskinoxp.azurewebsites.net/timeslots/"+ movie.id
+const urlSortTimeslots = "https://wayskinoxp.azurewebsites.net/timeslot/sort" //skal flyttes
+
+const monthNames = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+]
+const weekDayNames = [
+    "Monday","Tuesday","Wednesday",
+    "Thursday","Friday","Saturday","Sunday"
+]
 
 let halls = []
 let timeslots = []
-let filteredTimeslots = []
+//let filteredTimeslots = []
 
 
 
@@ -21,7 +31,7 @@ let row
 let cellCount = 0
 function showHalls(hall){
     const cell = row.insertCell(cellCount++)
-    cell.innerHTML = hall.name
+    cell.innerHTML = hall.hallName
     cell.classList.add("tablehead")
 }
 async function setHeader(){
@@ -32,6 +42,7 @@ async function setHeader(){
     rowCount = table.rows.length
     row = table.insertRow(rowCount)
     cellCount = 0
+    //await fetchAnyUrl(urlSortTimeslots) // skal lyttes til post timeslots
 }
 
 
@@ -54,7 +65,11 @@ function setTable(timeSlot) {
                 console.log("cellCont :"+cellCount+" , hall nr : "+timeSlot.hall.id)
                 }
             )
-            timeslotElement.innerHTML = timeSlot.start
+
+            const movieDate = new Date(timeSlot.date)
+
+            timeslotElement.innerHTML = weekDayNames[parseInt(movieDate.getDay())-1]+" the "+movieDate.getDate()+"th at "+timeSlot.start
+            console.log("Weekday No "+movieDate.getDay())
             cell.append(timeslotElement)
             row = table.insertRow(rowCount)
             cellCount = 0
@@ -77,9 +92,9 @@ async function fetchTimeslots(){
 
     timeslots = await fetchAnyUrl(urlTimeslots)
     console.log("Timeslots: "+timeslots)
-    timeslots.forEach(filter)
-    console.log("filteredTimeslots: "+filteredTimeslots)
-    filteredTimeslots.forEach(setTable)
+    //timeslots.forEach(filter)
+    //console.log("filteredTimeslots: "+timeslots)
+    timeslots.forEach(setTable)
 }
 async function fetchhalls(){
     const halls = await fetchAnyUrl(urlHalls)
@@ -109,14 +124,14 @@ async function fetchAnyUrl(url) {
 pbGoBack.addEventListener("click", function(){goBack()})
 
 function goBack(){
-    window.location.href = "frontpage.html"
+    window.location.href = "index.html"
     sessionStorage.clear()
 }
 function filter(timeslot){
 
     console.log("timeslot.movie: "+timeslot.movie.id)
     if (timeslot.movie.id == hall.id){
-        filteredTimeslots.push(timeslot)
+        timeslots.push(timeslot)
     }
 
 }

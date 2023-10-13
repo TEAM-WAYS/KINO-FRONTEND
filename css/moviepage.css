@@ -1,8 +1,9 @@
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
+    margin: 110px 0px;
     padding: 0;
     background-color: #f2f2f2;
+
 }
 body {
     background: url("https://cdn.pixabay.com/photo/2016/01/22/08/20/film-1155439_1280.jpg");
@@ -12,7 +13,7 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 20px;
 }
 
 #table {
@@ -45,6 +46,14 @@ body {
 
 
 
+#backlayer{
+    background: rgba(255,255,255,0.5);
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+
+}
 
 button {
     padding: 10px 20px;
@@ -71,3 +80,4 @@ button:hover {
 #table .timeslot:hover {
     background-color: #37da07;
 }
+
