@@ -1,32 +1,37 @@
-const urlSeats = "https://wayskinoxp.azurewebsites.net/seats"
-const urlSeat = "https://wayskinoxp.azurewebsites.net/seat"
 
-function calculateTotal() {
+
+function fetchSeatCount() {
     // Get the number of seats selected by the user
    // var seatCount = parseInt(document.getElementById("seatCount").value);
     const selectedSeats = JSON.parse(sessionStorage.getItem('seats'))
-    
-        /*fetch(urlSeat, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(seat)
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Total Price:', data)
-        })
-        .catch(error => {
-            console.error('Error:', error)
-        })
-*/
 
-    // Calculate the total price (we set 120 DKK per seat)
-    const totalPrice = selectedSeats.length * 120;
+        const azureApiUrl = "http://wayskinoxp.azurewebsites.net/seats"
 
-    document.getElementById("totalPrice").textContent = totalPrice + " DKK"
-}
+        // Make a GET request to the Azure API to fetch the seat count.
+        fetch(azureApiUrl)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network error');
+                }
+                return response.json();
+            })
+            .then((data) => {
+
+                document.getElementById("seatCount").value = data.seatCount;
+                calculateTotal();
+            })
+            .catch((error) => {
+                console.error('Error fetch:', error);
+            });
+    }
+
+    function calculateTotal() {
+        var seatCount = parseInt(document.getElementById("seatCount").value);
+
+        // Calculate the total price (we set 120 DKK per seat)
+        var totalPrice = seatCount * 120;
+        document.getElementById("totalPrice").textContent = totalPrice + " DKK";
+    }
 
 function initiatePayment() {
     
@@ -34,20 +39,17 @@ function initiatePayment() {
     alert("You have paid " + totalPrice + " DKK. Here are your tickt info!")
 
 }
+fetchSeatCount();
 
 document.addEventListener('DOMContentLoaded', function() {
-    const payCardButton = document.getElementById('paycard')
-    const payMobileButton = document.getElementById('paymobil')
+    const confirmButton = document.getElementById('confirm-button')
 
-        payCardButton.addEventListener('click', function() {
-            // Redirect to the "ticket.html" file
-            window.location.href = 'ticket.html'
-        });
-        payMobileButton.addEventListener('click', function() {
+
+        confirmButton.addEventListener('click', function() {
             // Redirect to the "ticket.html" file
             window.location.href = 'ticket.html'
         });
 
 });
 
-calculateTotal()
+
