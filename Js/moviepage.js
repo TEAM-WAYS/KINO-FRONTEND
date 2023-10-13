@@ -7,10 +7,10 @@ movieTitle.innerText = hall.title
 const table = document.getElementById("table")
 //const row = document.getElementById("row")
 const pbGoBack = document.getElementById("pbGoBack")
-const urlMovies = "http://localhost:8080/movies"
-const urlHalls = "http://localhost:8080/halls"
-const urlTimeslots = "http://localhost:8080/timeslots"
-const urlSortTimeslots = "http://localhost:8080/timeslot/sort" //skal flyttes
+const urlMovies = "https://wayskinoxp.azurewebsites.net/movies"
+const urlHalls = "https://wayskinoxp.azurewebsites.net/halls"
+const urlTimeslots = "https://wayskinoxp.azurewebsites.net/timeslots"
+const urlSortTimeslots = "https://wayskinoxp.azurewebsites.net/timeslot/sort" //skal flyttes
 
 let halls = []
 let timeslots = []
@@ -111,7 +111,7 @@ async function fetchAnyUrl(url) {
 pbGoBack.addEventListener("click", function(){goBack()})
 
 function goBack(){
-    window.location.href = "frontpage.html"
+    window.location.href = "index.html"
     sessionStorage.clear()
 }
 function filter(timeslot){

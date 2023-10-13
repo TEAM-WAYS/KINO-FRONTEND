@@ -4,7 +4,7 @@ const movielink = document.getElementById("movielink")
 
 const table = document.getElementById("movietable")
 
-const urlMovies = "http://localhost:8080/movies"
+const urlMovies = "https://wayskinoxp.azurewebsites.net/movies"
 
 
 let cellCount = 0

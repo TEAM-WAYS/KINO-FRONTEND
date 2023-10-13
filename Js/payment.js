@@ -1,5 +1,5 @@
-const urlSeats = "http://localhost:8080/seats"
-const urlSeat = "http://localhost:8080/seat"
+const urlSeats = "https://wayskinoxp.azurewebsites.net/seats"
+const urlSeat = "https://wayskinoxp.azurewebsites.net/seat"
 
 function calculateTotal() {
     // Get the number of seats selected by the user
