@@ -3,8 +3,8 @@ const timeslot = JSON.parse(sessionStorage.getItem("timeslot"))
 const seatContainer = document.getElementById('seat-container');
 console.log("timeslot:  "+ timeslot)
 //const urlTimeslot = "http://localhost:8080/timeslot/"+timeslotId
-const urlSeats = "http://localhost:8080/seats/"+timeslot.id
-const urlSeat = "http://localhost:8080/seat"
+const urlSeats = "https://wayskinoxp.azurewebsites.net/seats/"+timeslot.id
+const urlSeat = "https://wayskinoxp.azurewebsites.net/seat"
 const hallHeader = document.getElementById("hallname")
 hallHeader.innerHTML= timeslot.hall.name
 

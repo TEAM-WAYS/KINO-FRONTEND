@@ -62,7 +62,7 @@ seats.forEach(function(seat){
     cell1.appendChild(ticket)
 })
 pbReturnToStart.addEventListener("click",function (){
-    window.location.href("frontpage.html")
+    window.location.href("index.html")
     sessionStorage.clear()
 })
 
