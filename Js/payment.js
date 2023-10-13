@@ -1,14 +1,14 @@
 
-
-function fetchSeatCount() {
+const selectedSeats = JSON.parse(sessionStorage.getItem('seats'))
+/* function fetchSeatCount() {
     // Get the number of seats selected by the user
    // var seatCount = parseInt(document.getElementById("seatCount").value);
-    const selectedSeats = JSON.parse(sessionStorage.getItem('seats'))
 
-        const azureApiUrl = "http://wayskinoxp.azurewebsites.net/seats"
+
+        //const azureApiUrl = "http://wayskinoxp.azurewebsites.net/seats"
 
         // Make a GET request to the Azure API to fetch the seat count.
-        fetch(azureApiUrl)
+       fetch(azureApiUrl)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Network error');
@@ -23,33 +23,40 @@ function fetchSeatCount() {
             .catch((error) => {
                 console.error('Error fetch:', error);
             });
-    }
-
+    }*/
+    calculateTotal()
     function calculateTotal() {
-        var seatCount = parseInt(document.getElementById("seatCount").value);
+        // var seatCount = parseInt(document.getElementById("seatCount").value);
+        const seatCount = parseInt(selectedSeats.length);
 
         // Calculate the total price (we set 120 DKK per seat)
-        var totalPrice = seatCount * 120;
+        const totalPrice = seatCount * 120;
         document.getElementById("totalPrice").textContent = totalPrice + " DKK";
     }
 
 function initiatePayment() {
     
-    var totalPrice = parseInt(document.getElementById("totalPrice").textContent);
+    const totalPrice = parseInt(document.getElementById("totalPrice").textContent);
+    window.location.href = 'ticket.html'
     alert("You have paid " + totalPrice + " DKK. Here are your tickt info!")
 
 }
-fetchSeatCount();
+//fetchSeatCount();
 
 document.addEventListener('DOMContentLoaded', function() {
-    const confirmButton = document.getElementById('confirm-button')
 
 
-        confirmButton.addEventListener('click', function() {
-            // Redirect to the "ticket.html" file
-            window.location.href = 'ticket.html'
-        });
+
+
 
 });
+
+const confirmButton = document.getElementById('confirm-button')
+const toticket = document.getElementById('toticket')
+confirmButton.addEventListener('click', function() {
+    // Redirect to the "ticket.html" file
+    window.location.href = 'ticket.html'
+})
+
 
 

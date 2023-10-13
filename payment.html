@@ -8,8 +8,7 @@
 <div class="payment-info">
 <h1>Pay for your tickets</h1>
     <div>
-        <label for="seatCount">Number of Seats:</label>
-        <input type="number" id="seatCount" min="1" value="1" onchange="calculateTotal()">
+
         <p>Total Price for All Seats: <span id="totalPrice">120 DKK</span></p>
     </div>
     <div class="payment-method">
@@ -42,10 +41,12 @@
             <label for="name">Cardholder Name</label>
             <input type="text" id="name" placeholder="Victoria D">
         </div>
-        <button id="confirm-button" onclick="initiatePayment()">Proceed to Payment</button>
+        <button id="confirm-button" onclick="initiatePayment()" ">Proceed to Payment</button>
     </form>
 </div>
 
-<script type="module" src="../Js/payment.js"></script>
+
+
+<script src="Js/payment.js"></script>
 </body>
 </html>

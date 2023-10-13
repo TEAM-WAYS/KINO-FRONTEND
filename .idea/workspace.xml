@@ -4,21 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5de06f-ca17-4b9c-8323-f83165dfbe9b" name="Changes" comment="payment v2.2">
+    <list default="true" id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="typo fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Js/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/payment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/payment.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/payment.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="typo_js_fix" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,10 +42,10 @@
       </UrlAndAccount>
     </option>
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2WXpfbfTpxUzSOWmKiskwF8LmwV" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2W1ZEj9N1liEQC6TDkqDU4mxCHk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -53,77 +59,79 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager">
-    <configuration name="frontpage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KinoFrontend/frontpage.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
-      <module name="KINO-FRONTENDx12" />
+      <module name="KinoFrontend" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="KINO-FRONTENDx12" />
+      <module name="KinoFrontend" />
       <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.frontpage.html" />
-        <item itemvalue="JavaScript Debug.frontpage.html" />
-      </list>
-    </recent_temporary>
+    <configuration default="true" type="SwaggerCodegen">
+      <option name="activeConfigurationType" value="FILE" />
+      <option name="configurationPath" value="" />
+      <option name="customJreEnabled" value="false" />
+      <option name="customTemplatesPath" value="" />
+      <option name="enableDebugLogging" value="false" />
+      <option name="generateToPath" value="C:\Users\stinu\KEA Datamatiker\1Semester\JavaProgram\KinoFrontend\gen" />
+      <option name="generationParameters">
+        <list />
+      </option>
+      <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0/openapi-generator-cli-5.0.0.jar" />
+      <option name="jdkPath" value="" />
+      <option name="language" value="java" />
+      <option name="specificationPath" value="C:\Users\stinu\AppData\Roaming\JetBrains\IntelliJIdea2022.3\openApiExport\superhero4-openapi.yaml" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8f5de06f-ca17-4b9c-8323-f83165dfbe9b" name="Changes" comment="" />
-      <created>1696888883353</created>
+      <changelist id="2504fd70-23ac-4c16-bdbd-2c7dcb6dfd15" name="Changes" comment="" />
+      <created>1695901939653</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1696888883353</updated>
-      <workItem from="1696888885565" duration="304000" />
-      <workItem from="1696931900863" duration="69000" />
+      <updated>1695901939653</updated>
+      <workItem from="1695901940998" duration="1544000" />
+      <workItem from="1695975357807" duration="3014000" />
+      <workItem from="1696237898146" duration="507000" />
     </task>
-    <task id="LOCAL-00001" summary="choose seat v1.1">
-      <option name="closed" value="true" />
-      <created>1696930841412</created>
+    <task id="LOCAL-00001" summary="start">
+      <created>1695902303288</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1696930841412</updated>
+      <updated>1695902303288</updated>
     </task>
-    <task id="LOCAL-00002" summary="choose seat v1.1">
-      <option name="closed" value="true" />
-      <created>1696931208417</created>
+    <task id="LOCAL-00002" summary="start">
+      <created>1695974777077</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1696931208417</updated>
+      <updated>1695974777077</updated>
     </task>
-    <task id="LOCAL-00003" summary="Revert &quot;choose seat v1.1&quot;&#10;&#10;This reverts commit 92d236f9">
-      <option name="closed" value="true" />
-      <created>1696931311037</created>
+    <task id="LOCAL-00003" summary="typo fix">
+      <created>1697206474127</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1696931311037</updated>
+      <updated>1697206474127</updated>
     </task>
-    <task id="LOCAL-00004" summary="problem fixed">
-      <created>1696945837228</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1696945837228</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,29 +142,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="developer" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="payment page version 1" />
-    <MESSAGE value="choose seat v1.1" />
-    <MESSAGE value="Revert &quot;choose seat v1.1&quot;&#10;&#10;This reverts commit 92d236f9" />
-    <MESSAGE value="problem fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="problem fixed" />
+    <MESSAGE value="start" />
+    <MESSAGE value="typo fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="typo fix" />
   </component>
 </project>
