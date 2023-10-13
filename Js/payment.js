@@ -37,7 +37,7 @@ const selectedSeats = JSON.parse(sessionStorage.getItem('seats'))
 function initiatePayment() {
     
     const totalPrice = parseInt(document.getElementById("totalPrice").textContent);
-    window.location.href = 'ticket.html'
+    window.location.href = "ticket.html"
     alert("You have paid " + totalPrice + " DKK. Here are your tickt info!")
 
 }
@@ -52,10 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const confirmButton = document.getElementById('confirm-button')
-const toticket = document.getElementById('toticket')
+
 confirmButton.addEventListener('click', function() {
     // Redirect to the "ticket.html" file
-    window.location.href = 'ticket.html'
+    window.location.href = "ticket.html"
 })
 
 
