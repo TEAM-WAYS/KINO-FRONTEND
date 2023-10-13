@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5de06f-ca17-4b9c-8323-f83165dfbe9b" name="Changes" comment="problem fixed" />
+    <list default="true" id="8f5de06f-ca17-4b9c-8323-f83165dfbe9b" name="Changes" comment="problem fixed">
+      <change beforePath="$PROJECT_DIR$/Js/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/User/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/deleteUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/updateUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/User/updateUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deleteUser.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,16 +18,16 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="seeReservedSeats" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -30,6 +35,9 @@
         <option name="url" value="https://github.com/TEAM-WAYS/KINO-FRONTEND.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -85,6 +93,7 @@
       <updated>1696888883353</updated>
       <workItem from="1696888885565" duration="304000" />
       <workItem from="1696931900863" duration="69000" />
+      <workItem from="1697197667293" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="choose seat v1.1">
       <option name="closed" value="true" />
