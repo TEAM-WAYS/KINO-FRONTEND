@@ -34,7 +34,7 @@ seats.forEach(function(seat){
     cell.classList.add("textCell")
 
     cell = row.insertCell(cellCount++)
-    cell.innerHTML = "Hall: -"+timeslot.hall.name+"-    "
+    cell.innerHTML = "Hall: -"+timeslot.hall.hallName+"-    "
     cell.classList.add("textCell")
 
     cellCount = 0
@@ -61,8 +61,10 @@ seats.forEach(function(seat){
     cell1.classList.add("maincell")
     cell1.appendChild(ticket)
 })
-pbReturnToStart.addEventListener("click",function (){
-    window.location.href("index.html")
+
+pbReturnToStart.addEventListener("click",() =>{
+
+    window.location.href ="index.html"
     sessionStorage.clear()
 })
 

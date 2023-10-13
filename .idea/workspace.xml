@@ -4,25 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5de06f-ca17-4b9c-8323-f83165dfbe9b" name="Changes" comment="problem fixed" />
+    <list default="true" id="8f5de06f-ca17-4b9c-8323-f83165dfbe9b" name="Changes" comment="    ON HOLD" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="seeReservedSeats" />
+        <entry key="$PROJECT_DIR$" value="newMoviepage" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -30,6 +37,9 @@
         <option name="url" value="https://github.com/TEAM-WAYS/KINO-FRONTEND.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -71,6 +81,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.frontpage.html" />
+        <item itemvalue="JavaScript Debug.frontpage.html" />
+        <item itemvalue="JavaScript Debug.frontpage.html" />
         <item itemvalue="JavaScript Debug.frontpage.html" />
       </list>
     </recent_temporary>
@@ -117,7 +130,28 @@
       <option name="project" value="LOCAL" />
       <updated>1696945837228</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=" timeslots will be sorted">
+      <created>1697099718853</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697099718853</updated>
+    </task>
+    <task id="LOCAL-00006" summary=" timeslots where movieId">
+      <created>1697191063355</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697191063355</updated>
+    </task>
+    <task id="LOCAL-00007" summary="    ON HOLD">
+      <created>1697193188931</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697193188931</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,19 +162,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="payment-v2" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -151,6 +173,9 @@
     <MESSAGE value="choose seat v1.1" />
     <MESSAGE value="Revert &quot;choose seat v1.1&quot;&#10;&#10;This reverts commit 92d236f9" />
     <MESSAGE value="problem fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="problem fixed" />
+    <MESSAGE value=" timeslots will be sorted" />
+    <MESSAGE value=" timeslots where movieId" />
+    <MESSAGE value="    ON HOLD" />
+    <option name="LAST_COMMIT_MESSAGE" value="    ON HOLD" />
   </component>
 </project>
