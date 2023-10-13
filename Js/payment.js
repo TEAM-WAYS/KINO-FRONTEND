@@ -21,7 +21,7 @@ function fetchSeatCount() {
                 calculateTotal();
             })
             .catch((error) => {
-                console.error('Error:', error);
+                console.error('Error fetch:', error);
             });
     }
 
