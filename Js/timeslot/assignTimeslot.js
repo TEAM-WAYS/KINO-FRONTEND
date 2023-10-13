@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
+                await fetch('https://wayskinoxp.azurewebsites.net/timeslots/sort');
                 console.log('Timeslot data sent successfully.');
                 confirmationMessage.textContent = 'Timeslot created successfully!';
                 confirmationMessage.style.display = 'block';
