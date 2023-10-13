@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5de06f-ca17-4b9c-8323-f83165dfbe9b" name="Changes" comment="problem fixed" />
+    <list default="true" id="8f5de06f-ca17-4b9c-8323-f83165dfbe9b" name="Changes" comment="problem fixed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Js/topnav/loadTopNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/Js/topnav/loadTopNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/User.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buyticket.html" beforeDir="false" afterPath="$PROJECT_DIR$/buyticket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chooseseat.html" beforeDir="false" afterPath="$PROJECT_DIR$/chooseseat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/chooseseat.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/chooseseat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/frontpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/frontpage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/moviepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/moviepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/payment.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/payment.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ticket.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ticket.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/topNav.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/topNav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deleteUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/deleteUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/moviepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticket.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/topnav/Topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/topnav/Topnav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/updateUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/updateUser.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,11 +38,11 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
