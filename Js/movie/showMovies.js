@@ -1,6 +1,10 @@
+import {
+    getMovies,
+    deleteMovie,
+} from '../api.js';
+
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("https://wayskinoxp.azurewebsites.net/movies")
-        .then(response => response.json())
+    getMovies()
         .then(data => {
             const movieList = document.getElementById("movieList");
             data.forEach(movie => {
@@ -46,13 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     const confirmDelete = window.confirm("Are you sure you want to delete this movie?");
 
                     if (confirmDelete) {
-                        fetch(`https://wayskinoxp.azurewebsites.net/movies/delete/${movie.id}`, {
-                            method: "DELETE",
-                        })
+                        deleteMovie(movie.id)
                             .then(response => {
                                 if (!response.ok) {
                                     throw new Error("Delete request failed");
                                 }
+                                /* this is not triggering cause my backend for the delete endpoints
+                                have not been updated to use the APIresponse DTO i made
+                                so its receiving a string when its expecting a JSON
+                                 */
                                 movieDiv.remove();
                             })
                             .catch(error => {

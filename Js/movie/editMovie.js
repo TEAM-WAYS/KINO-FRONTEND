@@ -1,12 +1,15 @@
+import {
+    getMovieById,
+    updateMovie,
+} from '../api.js';
+
 document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
     const movieId = urlParams.get("id");
     const confirmationMessage = document.getElementById("confirmation-message");
 
-    fetch(`https://wayskinoxp.azurewebsites.net/movies/${movieId}`)
-        .then(response => response.json())
+    getMovieById(movieId)
         .then(data => {
-
             document.getElementById("editTitle").value = data.title;
             document.getElementById("editDuration").value = data.duration;
             document.getElementById("editDirector").value = data.director;
@@ -14,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("editGenre").value = data.genre;
             document.getElementById("editDescription").value = data.description;
             document.getElementById("editPegi").value = data.pegi;
-
         })
         .catch(error => {
             console.error("Error fetching movie for editing:", error);
@@ -36,40 +38,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         updatedMovieData.id = movieId;
 
-        console.log(updatedMovieData)
-        fetch(`https://wayskinoxp.azurewebsites.net/movies`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(updatedMovieData),
-        })
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error("Update request failed with status: " + response.status);
-                }
-                if (response.headers.get("content-type").includes("application/json")) {
-                    return response.json();
-                } else {
-                    return response.text();
-                }
-            })
+        updateMovie(updatedMovieData)
             .then((data) => {
-                if (typeof data === "object") {
-                    console.log("Movie updated successfully:", data);
-                    confirmationMessage.innerHTML = "Movie updated successfully!";
-                    confirmationMessage.style.display = "block";
-                    setTimeout(() => {
-                        window.location.href = "showMovies.html";
-                    }, 2000);
-                } else {
-                    console.log("Plain text response:", data);
-                    confirmationMessage.innerHTML = "Movie updated successfully!";
-                    confirmationMessage.style.display = "block";
-                    setTimeout(() => {
-                        window.location.href = "showMovies.html";
-                    }, 2000);
-                }
+                console.log("Movie updated successfully:", data);
+                confirmationMessage.innerHTML = "Movie updated successfully!";
+                confirmationMessage.style.display = "block";
+                setTimeout(() => {
+                    window.location.href = "showMovies.html";
+                }, 2000);
             })
+            .catch(error => {
+                console.error("Error updating movie:", error);
+            });
     });
 });

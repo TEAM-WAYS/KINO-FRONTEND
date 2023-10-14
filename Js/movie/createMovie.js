@@ -1,3 +1,7 @@
+import {
+    createMovie,
+} from '../api.js';
+
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('formMovie');
     const submitButton = document.getElementById('submit');
@@ -16,28 +20,17 @@ document.addEventListener('DOMContentLoaded', function () {
             pegi: document.getElementById('inpPegi').value
         };
 
-        console.log('FormData:', formData);
-        fetch('https://wayskinoxp.azurewebsites.net/movies', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-            .then(response => {
-                if (response.ok) {
-                    console.log('Movie data sent successfully.');
-                    confirmationMessage.innerHTML = "Movie created successfully!";
-                    confirmationMessage.style.display = "block";
-                    setTimeout(() => {
-                        window.location.href = "showMovies.html";
-                    }, 2000);
-                } else {
-                    console.error('Error sending movie data.');
-                }
+        createMovie(formData)
+            .then(data => {
+                console.log('Movie data sent successfully:', data);
+                confirmationMessage.innerHTML = "Movie created successfully!";
+                confirmationMessage.style.display = "block";
+                setTimeout(() => {
+                    window.location.href = "showMovies.html";
+                }, 2000);
             })
             .catch(error => {
-                console.error('Error:', error);
+                console.error('Error sending movie data:', error);
             });
     });
 });
